@@ -1,0 +1,2306 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="version" content="2.0-20251207">
+    <meta name="theme-color" content="#B8860B">
+    <meta name="description" content="استثمار تعدين الذهب في غرب أفريقيا - 860,769 أونصة ذهب قابلة للاستخلاص، عائد صافٍ 328 مليون دولار">
+    <title>دراسة جدوى مشروع تعدين الذهب | غرب أفريقيا</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-gold: #B8860B;
+            --secondary-gold: #D4AF37;
+            --dark-bg: #1A1A1A;
+            --light-bg: #F5F5F5;
+            --text-dark: #2C2C2C;
+            --text-light: #666666;
+            --white: #FFFFFF;
+            --border: #E0E0E0;
+            --success: #28A745;
+            --info: #17A2B8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Cairo', sans-serif;
+            background: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.8;
+            overflow-x: hidden;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--dark-bg) 0%, #2A2A2A 100%);
+            padding: 25px 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .logo span {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-gold);
+            transition: width 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary-gold);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .dashboard-btn {
+            background: linear-gradient(135deg, #0066B2, #1C69D4);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 15px rgba(0, 102, 178, 0.3);
+        }
+
+        .dashboard-btn i {
+            background: linear-gradient(135deg, #FFD700, #FFA500, #FF69B4, #00CED1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 1.1rem;
+            animation: colorShift 3s ease-in-out infinite;
+        }
+
+        @keyframes colorShift {
+            0%, 100% { filter: hue-rotate(0deg); }
+            50% { filter: hue-rotate(30deg); }
+        }
+
+        .dashboard-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 102, 178, 0.5);
+            background: linear-gradient(135deg, #004C8C, #0066B2);
+        }
+
+        /* Language Switcher */
+        .language-switcher {
+            position: relative;
+            display: inline-block;
+        }
+
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            padding: 8px 15px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+
+        .lang-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: var(--secondary-gold);
+        }
+
+        .lang-dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            right: 0;
+            margin-top: 5px;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            min-width: 150px;
+            z-index: 1000;
+            padding: 5px 0;
+        }
+
+        .language-switcher.active .lang-dropdown {
+            display: block;
+        }
+
+        .lang-option {
+            padding: 12px 20px;
+            color: var(--text-dark);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .lang-option:last-child {
+            border-bottom: none;
+        }
+
+        .lang-option:hover {
+            background: var(--light-bg);
+            color: var(--primary-gold);
+        }
+
+        .lang-option.active {
+            background: linear-gradient(135deg, rgba(184, 134, 11, 0.1), rgba(212, 175, 55, 0.1));
+            color: var(--primary-gold);
+            font-weight: 700;
+        }
+
+        /* Dashboard Modal */
+        .dashboard-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 10000;
+            overflow-y: auto;
+            animation: fadeIn 0.3s;
+        }
+
+        .dashboard-modal.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+
+        .dashboard-content {
+            max-width: 1600px;
+            margin: 40px auto;
+            padding: 40px;
+            background: var(--white);
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .dashboard-close {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            background: #ff4444;
+            color: white;
+            width: 45px;
+            height: 45px;
+            border-radius: 50%;
+            border: none;
+            font-size: 1.5rem;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s;
+            z-index: 10;
+        }
+
+        .dashboard-close:hover {
+            background: #cc0000;
+            transform: rotate(90deg);
+        }
+
+        .dashboard-header {
+            text-align: center;
+            margin-bottom: 50px;
+            padding-top: 20px;
+        }
+
+        .dashboard-header h1 {
+            color: var(--primary-gold);
+            font-size: 2.8rem;
+            margin-bottom: 10px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .dashboard-header p {
+            color: var(--text-light);
+            font-size: 1.2rem;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .dashboard-card {
+            background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-align: center;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .dashboard-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(184, 134, 11, 0.2);
+            border-color: var(--primary-gold);
+        }
+
+        .dashboard-card i {
+            font-size: 3rem;
+            color: var(--primary-gold);
+            margin-bottom: 15px;
+        }
+
+        .dashboard-card .metric-value {
+            font-size: 2.2rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin: 10px 0;
+        }
+
+        .dashboard-card .metric-label {
+            color: var(--text-light);
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        .chart-section {
+            background: #f8f9fa;
+            padding: 40px;
+            border-radius: 15px;
+            margin-bottom: 30px;
+        }
+
+        .chart-section h2 {
+            color: var(--primary-gold);
+            margin-bottom: 30px;
+            text-align: center;
+            font-size: 2rem;
+        }
+
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+        }
+
+        .chart-container {
+            background: white;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+        }
+
+        .chart-container h3 {
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            font-size: 1.4rem;
+            text-align: center;
+        }
+
+        .bar-chart {
+            display: flex;
+            align-items: flex-end;
+            justify-content: space-around;
+            height: 250px;
+            gap: 15px;
+            padding: 20px 0;
+        }
+
+        .bar {
+            flex: 1;
+            background: linear-gradient(to top, var(--primary-gold), var(--secondary-gold));
+            border-radius: 8px 8px 0 0;
+            position: relative;
+            transition: all 0.3s;
+            min-width: 40px;
+        }
+
+        .bar:hover {
+            opacity: 0.8;
+            transform: scaleY(1.05);
+        }
+
+        .bar-label {
+            position: absolute;
+            bottom: -30px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-size: 0.85rem;
+            color: var(--text-dark);
+            white-space: nowrap;
+        }
+
+        .bar-value {
+            position: absolute;
+            top: -25px;
+            left: 50%;
+            transform: translateX(-50%);
+            font-weight: 700;
+            color: var(--text-dark);
+            font-size: 0.9rem;
+        }
+
+        .pie-chart {
+            width: 250px;
+            height: 250px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .legend {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+            margin-top: 20px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 1rem;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+        }
+
+        .financial-summary {
+            background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold));
+            color: white;
+            padding: 40px;
+            border-radius: 15px;
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .financial-summary h2 {
+            font-size: 2.2rem;
+            margin-bottom: 30px;
+        }
+
+        .financial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 30px;
+        }
+
+        .financial-item {
+            background: rgba(255, 255, 255, 0.15);
+            padding: 25px;
+            border-radius: 12px;
+            backdrop-filter: blur(10px);
+        }
+
+        .financial-item .amount {
+            font-size: 2rem;
+            font-weight: 800;
+            margin: 10px 0;
+        }
+
+        .financial-item .description {
+            font-size: 1.1rem;
+            opacity: 0.9;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--secondary-gold) 100%);
+            padding: 100px 0;
+            text-align: center;
+            color: var(--white);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320"><path fill="rgba(255,255,255,0.1)" d="M0,96L48,112C96,128,192,160,288,160C384,160,480,128,576,122.7C672,117,768,139,864,144C960,149,1056,139,1152,122.7C1248,107,1344,85,1392,74.7L1440,64L1440,320L1392,320C1344,320,1248,320,1152,320C1056,320,960,320,864,320C768,320,672,320,576,320C480,320,384,320,288,320C192,320,96,320,48,320L0,320Z"></path></svg>') no-repeat bottom;
+            background-size: cover;
+            opacity: 0.3;
+        }
+
+        .hero-content {
+            position: relative;
+            z-index: 1;
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.2);
+        }
+
+        .hero p {
+            font-size: 1.4rem;
+            max-width: 800px;
+            margin: 0 auto 40px;
+            line-height: 1.8;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--white);
+            color: var(--primary-gold);
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-weight: 700;
+            font-size: 1.1rem;
+            text-decoration: none;
+            transition: all 0.3s;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.3);
+        }
+
+        /* Section Styles */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 2.8rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 15px;
+            position: relative;
+            display: inline-block;
+        }
+
+        .section-title h2::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: var(--primary-gold);
+        }
+
+        .section-title p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 20px auto 0;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .stat-card {
+            background: var(--white);
+            padding: 35px;
+            border-radius: 15px;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            transition: all 0.3s;
+            border-top: 4px solid var(--primary-gold);
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 15px 40px rgba(0,0,0,0.15);
+        }
+
+        .stat-card i {
+            font-size: 3rem;
+            color: var(--primary-gold);
+            margin-bottom: 20px;
+        }
+
+        .stat-card .value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            color: var(--text-dark);
+            margin-bottom: 10px;
+        }
+
+        .stat-card .label {
+            font-size: 1.1rem;
+            color: var(--text-light);
+        }
+
+        /* Content Section */
+        .content-section {
+            background: var(--white);
+        }
+
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 40px;
+        }
+
+        .content-card {
+            background: var(--light-bg);
+            padding: 35px;
+            border-radius: 15px;
+            border-right: 5px solid var(--primary-gold);
+        }
+
+        .content-card h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .content-card h3 i {
+            color: var(--primary-gold);
+            font-size: 1.5rem;
+        }
+
+        .content-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .content-card ul li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .content-card ul li:last-child {
+            border-bottom: none;
+        }
+
+        .content-card ul li::before {
+            content: '▸';
+            color: var(--primary-gold);
+            font-weight: bold;
+        }
+
+        /* Table Section */
+        .table-section {
+            padding: 80px 0;
+            background: var(--light-bg);
+        }
+
+        .table-container {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            overflow-x: auto;
+            margin-bottom: 40px;
+        }
+
+        .table-container h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--primary-gold);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th {
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--secondary-gold) 100%);
+            color: var(--white);
+            padding: 18px;
+            text-align: right;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        td {
+            padding: 18px;
+            border-bottom: 1px solid var(--border);
+            text-align: right;
+            font-size: 1.05rem;
+        }
+
+        tr:hover {
+            background: rgba(184, 134, 11, 0.05);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-bg);
+            color: var(--white);
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.5rem;
+            margin-bottom: 20px;
+            color: var(--secondary-gold);
+        }
+
+        .footer-section p,
+        .footer-section a {
+            color: rgba(255,255,255,0.8);
+            text-decoration: none;
+            display: block;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--secondary-gold);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            color: rgba(255,255,255,0.6);
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .container {
+                max-width: 100%;
+                padding: 0 15px;
+            }
+            
+            .stats-grid,
+            .content-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            .logo span {
+                font-size: 0.9rem;
+            }
+
+            nav ul {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 10px;
+                justify-content: center;
+            }
+
+            nav a {
+                font-size: 0.85rem;
+            }
+
+            .dashboard-btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+                line-height: 1.2;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+
+            .section-title p {
+                font-size: 0.95rem;
+            }
+
+            .stats-grid,
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .stat-card {
+                padding: 20px;
+            }
+
+            .stat-card .value {
+                font-size: 2rem;
+            }
+
+            .charts-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .table-container {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            table {
+                font-size: 0.85rem;
+                min-width: 600px;
+            }
+
+            th, td {
+                padding: 10px 8px;
+            }
+
+            .dashboard-modal {
+                width: 95%;
+                max-width: 95%;
+                height: 95vh;
+                padding: 15px;
+            }
+
+            .dashboard-header h2 {
+                font-size: 1.5rem;
+            }
+
+            .metric-card h3 {
+                font-size: 0.85rem;
+            }
+
+            .metric-value {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 1.6rem;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+            }
+
+            .section-title h2 {
+                font-size: 1.5rem;
+            }
+
+            .cta-button {
+                padding: 12px 30px;
+                font-size: 0.9rem;
+            }
+
+            .stat-card .value {
+                font-size: 1.6rem;
+            }
+
+            .stat-card .label {
+                font-size: 0.85rem;
+            }
+
+            table {
+                font-size: 0.75rem;
+            }
+
+            th, td {
+                padding: 8px 5px;
+            }
+        }
+
+        /* Performance optimizations */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="calx-logo-black2.png" alt="CALX Logo" style="height: 50px; filter: brightness(0) invert(1);">
+                    <span>رحلة المستثمر إلى الذهب</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#overview">نظرة عامة</a></li>
+                        <li><a href="#data">البيانات</a></li>
+                        <li><a href="#resources">الموارد</a></li>
+                        <li><a href="#contact">تواصل</a></li>
+                    </ul>
+                </nav>
+                <div class="language-switcher">
+                    <button class="lang-btn">
+                        <i class="fas fa-globe"></i>
+                        <span>العربية</span>
+                    </button>
+                    <div class="lang-dropdown">
+                        <a href="feasibility-study-website.html" class="lang-option active">
+                            <span>🇸🇦</span>
+                            <span>العربية</span>
+                        </a>
+                        <a href="feasibility-study-website-english.html" class="lang-option">
+                            <span>🇬🇧</span>
+                            <span>English</span>
+                        </a>
+                        <a href="feasibility-study-website-chinese.html" class="lang-option">
+                            <span>🇨🇳</span>
+                            <span>中文</span>
+                        </a>
+                    </div>
+                </div>
+                <button class="dashboard-btn" onclick="openDashboard()">
+                    <i class="fas fa-chart-pie"></i>
+                    <span>لوحة المستثمرين</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>رحلة المستثمر إلى ذهب غرب أفريقيا</h1>
+                <p>فرصة استثمارية حصرية: 860 ألف أونصة ذهب بعائد صافٍ 328 مليون دولار على مدى 8.5 سنوات</p>
+                <a href="#overview" class="cta-button">استكشف المشروع</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>نظرة عامة على المشروع</h2>
+                <p>تقييم شامل يعتمد على منهجية علمية راسخة لضمان أعلى معايير الدقة والشفافية</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-gem"></i>
+                    <div class="value">860,769</div>
+                    <div class="label">الذهب القابل للاستخلاص (أونصة)</div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-chart-line"></i>
+                    <div class="value">1.46</div>
+                    <div class="label">متوسط العيار (جرام/طن)</div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-industry"></i>
+                    <div class="value">18,337,590</div>
+                    <div class="label">إجمالي الخام (طن)</div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-calendar-alt"></i>
+                    <div class="value">~8.5</div>
+                    <div class="label">عمر المشروع (سنوات)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="content-section section">
+        <div class="container">
+            <div class="section-title">
+                <h2>المقدمة وسياق الدراسة</h2>
+            </div>
+
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3><i class="fas fa-flag"></i> أهداف المشروع</h3>
+                    <ul>
+                        <li>تحديد الإمكانات المعدنية الكاملة</li>
+                        <li>تحسين التخطيط طويل المدى</li>
+                        <li>رفع مستوى الدقة في القرارات الاستثمارية</li>
+                        <li>صياغة نموذج عمل مستدام</li>
+                        <li>ضمان الممارسات البيئية المسؤولة</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3><i class="fas fa-tasks"></i> نطاق الدراسة</h3>
+                    <ul>
+                        <li>تقييم الموارد المعدنية بدقة</li>
+                        <li>تحليل التراكيب الجيولوجية</li>
+                        <li>إعداد المعايير التشغيلية</li>
+                        <li>تحديد متطلبات البنية التحتية</li>
+                        <li>تقدير التكاليف الشاملة</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3><i class="fas fa-microscope"></i> المنهجية</h3>
+                    <ul>
+                        <li>أجهزة القياس الجيولوجي المتقدمة</li>
+                        <li>نظم المعلومات الجغرافية (GIS)</li>
+                        <li>أدوات أخذ العينات الدقيقة</li>
+                        <li>مراقبة جودة صارمة</li>
+                        <li>توثيق شامل للبيانات</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Geological Data Section -->
+    <section class="content-section section" style="background: var(--light-bg);">
+        <div class="container">
+            <div class="section-title">
+                <h2>البيانات الجيولوجية</h2>
+                <p>تحليل دقيق للتكوينات الصخرية والموارد المعدنية</p>
+            </div>
+
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3><i class="fas fa-mountain"></i> التكوينات الرئيسية</h3>
+                    <ul>
+                        <li>تكوينات صخرية متداخلة</li>
+                        <li>وحدات بركانية–رسوبية</li>
+                        <li>تكوينات صخرية متحولة</li>
+                        <li>تراكيب جيولوجية متنوعة</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3><i class="fas fa-gem"></i> أنواع التمعدن</h3>
+                    <ul>
+                        <li>البيريت (Pyrite)</li>
+                        <li>الكالكوبايرايت (Chalcopyrite)</li>
+                        <li>الآرسينوبايرايت (Arsenopyrite)</li>
+                        <li>السيليكا والعناصر المرافقة</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3><i class="fas fa-search"></i> الأعمال السابقة</h3>
+                    <ul>
+                        <li>مسوحات جيوكيميائية شاملة</li>
+                        <li>مسوحات مغناطيسية وراديومترية</li>
+                        <li>حملات حفر متعددة المراحل</li>
+                        <li>تحليل وفق معايير دولية</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Table Section -->
+    <section id="resources" class="table-section">
+        <div class="container">
+            <div class="section-title">
+                <h2 id="data">تقدير الموارد المعدنية</h2>
+                <p>تقديرات دقيقة للموارد بحدود قطع مختلفة بناءً على البيانات الجيولوجية</p>
+            </div>
+
+            <div class="table-container">
+                <h3><i class="fas fa-table"></i> جدول 1: إمكانات الذهب بغض النظر عن حدود القطع</h3>
+                <p style="margin-bottom: 20px; color: var(--text-light); font-style: italic;">
+                    (Gold Potential Estimation Regardless of Cut-off Grade)
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>العيار (جرام/طن)</th>
+                            <th>الحجم (متر مكعب)</th>
+                            <th>الوزن (طن)</th>
+                            <th>متوسط العيار (جرام/طن)</th>
+                            <th>الإنتاج (أونصة)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0.0 → 0.25</td>
+                            <td>703,650</td>
+                            <td>1,899,855</td>
+                            <td>0.25</td>
+                            <td>15,270</td>
+                        </tr>
+                        <tr>
+                            <td>0.25 → 0.5</td>
+                            <td>20,435,500</td>
+                            <td>55,175,850</td>
+                            <td>0.34</td>
+                            <td>603,142</td>
+                        </tr>
+                        <tr>
+                            <td>0.5 → 1.0</td>
+                            <td>8,990,050</td>
+                            <td>24,273,135</td>
+                            <td>0.69</td>
+                            <td>538,476</td>
+                        </tr>
+                        <tr>
+                            <td>1.0 → 1.5</td>
+                            <td>2,286,000</td>
+                            <td>6,172,200</td>
+                            <td>1.2</td>
+                            <td>238,129</td>
+                        </tr>
+                        <tr>
+                            <td>1.5 → 2.0</td>
+                            <td>1,168,550</td>
+                            <td>3,155,085</td>
+                            <td>1.73</td>
+                            <td>175,488</td>
+                        </tr>
+                        <tr>
+                            <td>2.0 → 999.0</td>
+                            <td>1,076,500</td>
+                            <td>2,906,550</td>
+                            <td>2.9</td>
+                            <td>270,999</td>
+                        </tr>
+                        <tr style="background: rgba(184, 134, 11, 0.15); font-weight: 700; font-size: 1.15rem;">
+                            <td><strong>Grand Total<br>الإجمالي الكلي</strong></td>
+                            <td><strong>34,660,250</strong></td>
+                            <td><strong>93,582,675</strong></td>
+                            <td><strong>0.61</strong></td>
+                            <td><strong>1,835,341</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3><i class="fas fa-table"></i> جدول 2: الموارد بحد قطع 0.5 جرام/طن</h3>
+                <p style="margin-bottom: 20px; color: var(--text-light); font-style: italic;">
+                    (Resources at 0.5 g/t Cut-off Grade)
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>العيار (جرام/طن)</th>
+                            <th>الحجم (متر مكعب)</th>
+                            <th>الوزن (طن)</th>
+                            <th>متوسط العيار (جرام/طن)</th>
+                            <th>الإنتاج (أونصة)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0.25 → 0.5</td>
+                            <td>245,150</td>
+                            <td>661,905</td>
+                            <td>0.5</td>
+                            <td>10,640</td>
+                        </tr>
+                        <tr>
+                            <td>0.5 → 1.0</td>
+                            <td>8,990,050</td>
+                            <td>24,273,135</td>
+                            <td>0.69</td>
+                            <td>538,476</td>
+                        </tr>
+                        <tr>
+                            <td>1.0 → 1.5</td>
+                            <td>2,286,000</td>
+                            <td>6,172,200</td>
+                            <td>1.2</td>
+                            <td>238,129</td>
+                        </tr>
+                        <tr>
+                            <td>1.5 → 2.0</td>
+                            <td>1,168,550</td>
+                            <td>3,155,085</td>
+                            <td>1.73</td>
+                            <td>175,488</td>
+                        </tr>
+                        <tr>
+                            <td>2.0 → 999</td>
+                            <td>1,076,500</td>
+                            <td>2,906,550</td>
+                            <td>2.9</td>
+                            <td>270,999</td>
+                        </tr>
+                        <tr style="background: rgba(184, 134, 11, 0.1); font-weight: 700;">
+                            <td><strong>الإجمالي</strong></td>
+                            <td><strong>13,766,250</strong></td>
+                            <td><strong>37,168,875</strong></td>
+                            <td><strong>1.03</strong></td>
+                            <td><strong>1,230,858</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3><i class="fas fa-table"></i> جدول 3: الموارد بحد قطع 0.8 جرام/طن (سيناريو التشغيل)</h3>
+                <p style="margin-bottom: 20px; color: var(--text-light); font-style: italic;">
+                    (Resources at 0.8 g/t Cut-off Grade - Primary Operating Scenario)
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>العيار (جرام/طن)</th>
+                            <th>الحجم (متر مكعب)</th>
+                            <th>الوزن (طن)</th>
+                            <th>متوسط العيار (جرام/طن)</th>
+                            <th>الإنتاج (أونصة)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0.5 → 1.0</td>
+                            <td>2,260,650</td>
+                            <td>6,103,755</td>
+                            <td>0.89</td>
+                            <td>174,654</td>
+                        </tr>
+                        <tr>
+                            <td>1.0 → 1.5</td>
+                            <td>2,286,000</td>
+                            <td>6,172,200</td>
+                            <td>1.2</td>
+                            <td>238,129</td>
+                        </tr>
+                        <tr>
+                            <td>1.5 → 2.0</td>
+                            <td>1,168,550</td>
+                            <td>3,155,085</td>
+                            <td>1.73</td>
+                            <td>175,488</td>
+                        </tr>
+                        <tr>
+                            <td>2.0 → 999</td>
+                            <td>1,076,500</td>
+                            <td>2,906,550</td>
+                            <td>2.9</td>
+                            <td>270,999</td>
+                        </tr>
+                        <tr style="background: rgba(184, 134, 11, 0.1); font-weight: 700;">
+                            <td><strong>الإجمالي</strong></td>
+                            <td><strong>6,791,700</strong></td>
+                            <td><strong>18,337,590</strong></td>
+                            <td><strong>1.46</strong></td>
+                            <td><strong>860,769</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3><i class="fas fa-table"></i> جدول 4: الموارد بحد قطع 1.0 جرام/طن</h3>
+                <p style="margin-bottom: 20px; color: var(--text-light); font-style: italic;">
+                    (Resources at 1.0 g/t Cut-off Grade)
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>العيار (جرام/طن)</th>
+                            <th>الحجم (متر مكعب)</th>
+                            <th>الوزن (طن)</th>
+                            <th>متوسط العيار (جرام/طن)</th>
+                            <th>الإنتاج (أونصة)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0.5 → 1.0</td>
+                            <td>27,550</td>
+                            <td>74,385</td>
+                            <td>1.0</td>
+                            <td>2,392</td>
+                        </tr>
+                        <tr>
+                            <td>1.0 → 1.5</td>
+                            <td>2,286,000</td>
+                            <td>6,172,200</td>
+                            <td>1.2</td>
+                            <td>238,129</td>
+                        </tr>
+                        <tr>
+                            <td>1.5 → 2.0</td>
+                            <td>1,168,550</td>
+                            <td>3,155,085</td>
+                            <td>1.73</td>
+                            <td>175,488</td>
+                        </tr>
+                        <tr>
+                            <td>2.0 → 999</td>
+                            <td>1,076,500</td>
+                            <td>2,906,550</td>
+                            <td>2.9</td>
+                            <td>270,999</td>
+                        </tr>
+                        <tr style="background: rgba(184, 134, 11, 0.1); font-weight: 700;">
+                            <td><strong>الإجمالي</strong></td>
+                            <td><strong>4,558,600</strong></td>
+                            <td><strong>12,308,220</strong></td>
+                            <td><strong>1.73</strong></td>
+                            <td><strong>684,594</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3><i class="fas fa-table"></i> جدول 5: محاكاة الإنتاج السنوي (تفصيل شهري)</h3>
+                <p style="margin-bottom: 20px; color: var(--text-light); font-style: italic;">
+                    (Annual Production Simulation - Monthly Breakdown)
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>الشهر</th>
+                            <th>الطن</th>
+                            <th>العيار (جرام/طن)</th>
+                            <th>الاستخلاص (%)</th>
+                            <th>الذهب (جرام)</th>
+                            <th>الذهب (أونصة)</th>
+                            <th>السعر (دولار/أونصة)</th>
+                            <th>القيمة (دولار)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>يناير</td>
+                            <td>180,000</td>
+                            <td>1.46</td>
+                            <td>80%</td>
+                            <td>210,240</td>
+                            <td>6,756</td>
+                            <td>1,500</td>
+                            <td>$10,134,002</td>
+                        </tr>
+                        <tr>
+                            <td>فبراير</td>
+                            <td>180,000</td>
+                            <td>1.46</td>
+                            <td>80%</td>
+                            <td>210,240</td>
+                            <td>6,756</td>
+                            <td>1,500</td>
+                            <td>$10,134,002</td>
+                        </tr>
+                        <tr>
+                            <td>مارس</td>
+                            <td>180,000</td>
+                            <td>1.46</td>
+                            <td>80%</td>
+                            <td>210,240</td>
+                            <td>6,756</td>
+                            <td>1,500</td>
+                            <td>$10,134,002</td>
+                        </tr>
+                        <tr>
+                            <td>أبريل</td>
+                            <td>180,000</td>
+                            <td>1.46</td>
+                            <td>80%</td>
+                            <td>210,240</td>
+                            <td>6,756</td>
+                            <td>1,500</td>
+                            <td>$10,134,002</td>
+                        </tr>
+                        <tr>
+                            <td>مايو</td>
+                            <td>180,000</td>
+                            <td>1.46</td>
+                            <td>80%</td>
+                            <td>210,240</td>
+                            <td>6,756</td>
+                            <td>1,500</td>
+                            <td>$10,134,002</td>
+                        </tr>
+                        <tr>
+                            <td>يونيو</td>
+                            <td>180,000</td>
+                            <td>1.46</td>
+                            <td>80%</td>
+                            <td>210,240</td>
+                            <td>6,756</td>
+                            <td>1,500</td>
+                            <td>$10,134,002</td>
+                        </tr>
+                        <tr>
+                            <td>يوليو</td>
+                            <td>180,000</td>
+                            <td>1.46</td>
+                            <td>80%</td>
+                            <td>210,240</td>
+                            <td>6,756</td>
+                            <td>1,500</td>
+                            <td>$10,134,002</td>
+                        </tr>
+                        <tr>
+                            <td>أغسطس</td>
+                            <td>180,000</td>
+                            <td>1.46</td>
+                            <td>80%</td>
+                            <td>210,240</td>
+                            <td>6,756</td>
+                            <td>1,500</td>
+                            <td>$10,134,002</td>
+                        </tr>
+                        <tr>
+                            <td>سبتمبر</td>
+                            <td>180,000</td>
+                            <td>1.46</td>
+                            <td>80%</td>
+                            <td>210,240</td>
+                            <td>6,756</td>
+                            <td>1,500</td>
+                            <td>$10,134,002</td>
+                        </tr>
+                        <tr>
+                            <td>أكتوبر</td>
+                            <td>180,000</td>
+                            <td>1.46</td>
+                            <td>80%</td>
+                            <td>210,240</td>
+                            <td>6,756</td>
+                            <td>1,500</td>
+                            <td>$10,134,002</td>
+                        </tr>
+                        <tr>
+                            <td>نوفمبر</td>
+                            <td>180,000</td>
+                            <td>1.46</td>
+                            <td>80%</td>
+                            <td>210,240</td>
+                            <td>6,756</td>
+                            <td>1,500</td>
+                            <td>$10,134,002</td>
+                        </tr>
+                        <tr>
+                            <td>ديسمبر</td>
+                            <td>180,000</td>
+                            <td>1.46</td>
+                            <td>80%</td>
+                            <td>210,240</td>
+                            <td>6,756</td>
+                            <td>1,500</td>
+                            <td>$10,134,002</td>
+                        </tr>
+                        <tr style="background: rgba(184, 134, 11, 0.1); font-weight: 700;">
+                            <td><strong>الإجمالي</strong></td>
+                            <td><strong>2,160,000</strong></td>
+                            <td><strong>—</strong></td>
+                            <td><strong>—</strong></td>
+                            <td><strong>2,522,880</strong></td>
+                            <td><strong>81,072</strong></td>
+                            <td><strong>—</strong></td>
+                            <td><strong>$121,608,021</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3><i class="fas fa-table"></i> جدول 6: التكاليف الرأسمالية (CAPEX)</h3>
+                <p style="margin-bottom: 20px; color: var(--text-light); font-style: italic;">
+                    (Capital Costs Breakdown)
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>البند</th>
+                            <th>التكلفة (دولار أمريكي)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>إعادة توطين السكان</td>
+                            <td>$6,726,000</td>
+                        </tr>
+                        <tr>
+                            <td>الحفر والتحليل الكيميائي</td>
+                            <td>$14,514,000</td>
+                        </tr>
+                        <tr>
+                            <td>شراء وتأجير المعدات</td>
+                            <td>$54,870,000</td>
+                        </tr>
+                        <tr>
+                            <td>بناء وصيانة الطرق</td>
+                            <td>$43,896,000</td>
+                        </tr>
+                        <tr>
+                            <td>دعم الأراضي</td>
+                            <td>$9,735,000</td>
+                        </tr>
+                        <tr>
+                            <td>المجموع الفرعي</td>
+                            <td>$129,741,000</td>
+                        </tr>
+                        <tr>
+                            <td>الطوارئ (5%)</td>
+                            <td>$6,487,050</td>
+                        </tr>
+                        <tr style="background: rgba(184, 134, 11, 0.1); font-weight: 700;">
+                            <td><strong>الإجمالي العام</strong></td>
+                            <td><strong>$136,228,050</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3><i class="fas fa-table"></i> جدول 7: التكاليف التشغيلية (OPEX) - تفصيل حسب الطن</h3>
+                <p style="margin-bottom: 20px; color: var(--text-light); font-style: italic;">
+                    (Operating Expenditures Breakdown per Ton)
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>فئة التكلفة</th>
+                            <th>دولار لكل طن</th>
+                            <th>الإجمالي (دولار)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>استخراج الخام</td>
+                            <td>$2.50</td>
+                            <td>$45,843,975</td>
+                        </tr>
+                        <tr>
+                            <td>تكاليف المعالجة</td>
+                            <td>$17.41</td>
+                            <td>$319,257,442</td>
+                        </tr>
+                        <tr>
+                            <td>إعادة التأهيل البيئي</td>
+                            <td>$0.30</td>
+                            <td>$5,501,277</td>
+                        </tr>
+                        <tr>
+                            <td>الصهر وبيع المنتج</td>
+                            <td>$4.76 (لكل أونصة)</td>
+                            <td>$4,097,260</td>
+                        </tr>
+                        <tr>
+                            <td>تحميل مخزون الخام</td>
+                            <td>$0.38</td>
+                            <td>$6,968,284</td>
+                        </tr>
+                        <tr>
+                            <td>الإدارة والرسوم الإدارية</td>
+                            <td>$5.28</td>
+                            <td>$96,822,475</td>
+                        </tr>
+                        <tr>
+                            <td>النقل (متعاقد فرعي)</td>
+                            <td>$0.20 لكل طن/كم</td>
+                            <td>$36,675,180</td>
+                        </tr>
+                        <tr style="background: rgba(184, 134, 11, 0.1); font-weight: 700;">
+                            <td><strong>الإجمالي</strong></td>
+                            <td><strong>—</strong></td>
+                            <td><strong>$515,165,894</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3><i class="fas fa-table"></i> جدول 8: مواصفات المعدات المطلوبة للمشروع</h3>
+                <p style="margin-bottom: 20px; color: var(--text-light); font-style: italic;">
+                    (Equipment Specifications - To be Purchased/Leased)
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>الفئة</th>
+                            <th>نوع المعدات</th>
+                            <th>المواصفات</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: rgba(184, 134, 11, 0.05); font-weight: 600;">
+                            <td colspan="3"><strong>معدات التعدين (Mining Operations)</strong></td>
+                        </tr>
+                        <tr>
+                            <td>الحفر</td>
+                            <td>منصة الحفر</td>
+                            <td>Atlas Copco L7 / L8</td>
+                        </tr>
+                        <tr>
+                            <td>الاستخراج</td>
+                            <td>الحفارة الهيدروليكية</td>
+                            <td>CAT RH90</td>
+                        </tr>
+                        <tr>
+                            <td>النقل</td>
+                            <td>شاحنات التعدين</td>
+                            <td>سعة 100 طن</td>
+                        </tr>
+                        <tr>
+                            <td>نزح المياه</td>
+                            <td>مضخة نزح المياه</td>
+                            <td>Flygt 150 HP، سعة 100 متر مكعب/ساعة</td>
+                        </tr>
+                        <tr>
+                            <td>التفجير</td>
+                            <td>معدات التفجير</td>
+                            <td>ANFO (Ammonium Nitrate Fuel Oil)</td>
+                        </tr>
+                        <tr style="background: rgba(184, 134, 11, 0.05); font-weight: 600;">
+                            <td colspan="3"><strong>معدات معالجة الخام (Ore Processing Plant)</strong></td>
+                        </tr>
+                        <tr>
+                            <td>الطحن الأولي</td>
+                            <td>المطحنة شبه الذاتية (SAG Mill)</td>
+                            <td>8.5م قطر × 4.35م، محرك 6 MW</td>
+                        </tr>
+                        <tr>
+                            <td>الطحن الثانوي</td>
+                            <td>المطحنة الكروية (Ball Mill)</td>
+                            <td>6.10م × 9.05م، سرعة حرجة 75%</td>
+                        </tr>
+                        <tr>
+                            <td>التكسير</td>
+                            <td>كسارة مخروطية (Cone Crusher)</td>
+                            <td>حسب المواصفات الفنية</td>
+                        </tr>
+                        <tr>
+                            <td>الفصل</td>
+                            <td>الإعصار المائي (Hydro-cyclones)</td>
+                            <td>10 وحدات Krebs قطر 380مم</td>
+                        </tr>
+                        <tr>
+                            <td>الغربلة</td>
+                            <td>شاشات الغربلة (Screens)</td>
+                            <td>حسب المواصفات الفنية</td>
+                        </tr>
+                        <tr>
+                            <td>النقل الداخلي</td>
+                            <td>السيور الناقلة (Conveyors)</td>
+                            <td>حسب المواصفات الفنية</td>
+                        </tr>
+                        <tr>
+                            <td>المعالجة</td>
+                            <td>تقنية المعالجة</td>
+                            <td>Carbon-in-Leach (CIL)</td>
+                        </tr>
+                        <tr style="background: rgba(184, 134, 11, 0.05); font-weight: 600;">
+                            <td colspan="3"><strong>البنية التحتية (Infrastructure)</strong></td>
+                        </tr>
+                        <tr>
+                            <td>الطاقة</td>
+                            <td>مولدات الديزل</td>
+                            <td>حسب احتياجات الطاقة</td>
+                        </tr>
+                        <tr>
+                            <td>التخزين</td>
+                            <td>خزانات الديزل</td>
+                            <td>سعة 30,000 لتر في الموقع</td>
+                        </tr>
+                        <tr>
+                            <td>السلامة</td>
+                            <td>مخزن المتفجرات</td>
+                            <td>وفقاً لمعايير السلامة</td>
+                        </tr>
+                        <tr>
+                            <td>الصيانة</td>
+                            <td>ورشة الصيانة</td>
+                            <td>معدات وأدوات الصيانة</td>
+                        </tr>
+                        <tr>
+                            <td>الاتصالات</td>
+                            <td>معدات الاتصالات</td>
+                            <td>نظام راديو ولاسلكي وإنترنت</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3><i class="fas fa-table"></i> جدول 9: متطلبات المياه والوقود</h3>
+                <p style="margin-bottom: 20px; color: var(--text-light); font-style: italic;">
+                    (Water & Fuel Requirements)
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>البند</th>
+                            <th>الكمية</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>المياه الخام للمصنع</td>
+                            <td>124 متر مكعب/ساعة</td>
+                        </tr>
+                        <tr>
+                            <td>المياه المعاد تدويرها</td>
+                            <td>69 متر مكعب/ساعة</td>
+                        </tr>
+                        <tr>
+                            <td>مياه مكافحة الغبار</td>
+                            <td>25 متر مكعب/ساعة</td>
+                        </tr>
+                        <tr>
+                            <td>بركة تخزين المياه الخام</td>
+                            <td>5,000 متر مكعب</td>
+                        </tr>
+                        <tr>
+                            <td>بركة المياه المعاد تدويرها</td>
+                            <td>2,500 متر مكعب</td>
+                        </tr>
+                        <tr>
+                            <td>خزان المياه الصالحة للشرب</td>
+                            <td>15 متر مكعب</td>
+                        </tr>
+                        <tr>
+                            <td>خزان مكافحة الغبار</td>
+                            <td>15,000 لتر</td>
+                        </tr>
+                        <tr>
+                            <td>سد مياه الأمطار</td>
+                            <td>10,000 متر مكعب</td>
+                        </tr>
+                        <tr>
+                            <td>تخزين الديزل في الموقع</td>
+                            <td>30,000 لتر</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3><i class="fas fa-table"></i> جدول 10: إيرادات الدولة والضرائب</h3>
+                <p style="margin-bottom: 20px; color: var(--text-light); font-style: italic;">
+                    (State Revenue & Taxes)
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>بند الإيرادات</th>
+                            <th>النسبة/المبلغ</th>
+                            <th>الإجمالي (دولار أمريكي)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>الرسوم الثابتة</td>
+                            <td>ثابت</td>
+                            <td>$88,496</td>
+                        </tr>
+                        <tr>
+                            <td>ضرائب السطح</td>
+                            <td>لكل كم²</td>
+                            <td>$150,442</td>
+                        </tr>
+                        <tr>
+                            <td>ضريبة سطح إضافية</td>
+                            <td>× 8.5</td>
+                            <td>$696,018</td>
+                        </tr>
+                        <tr>
+                            <td>الإتاوات (Royalties)</td>
+                            <td>5%</td>
+                            <td>$62,884,728</td>
+                        </tr>
+                        <tr>
+                            <td>ضريبة الشركات</td>
+                            <td>27.5%</td>
+                            <td>$207,990,154</td>
+                        </tr>
+                        <tr>
+                            <td>CFE</td>
+                            <td>لكل م³</td>
+                            <td>$3,022,389</td>
+                        </tr>
+                        <tr style="background: rgba(184, 134, 11, 0.1); font-weight: 700;">
+                            <td colspan="2"><strong>إجمالي إيرادات الدولة</strong></td>
+                            <td><strong>$274,082,227</strong></td>
+                        </tr>
+                        <tr style="background: rgba(184, 134, 11, 0.05);">
+                            <td colspan="2"><strong>إجمالي الإيرادات من المشروع</strong></td>
+                            <td><strong>$1,257,692,615</strong></td>
+                        </tr>
+                        <tr style="background: rgba(184, 134, 11, 0.05);">
+                            <td colspan="2"><strong>صافي التدفق النقدي (بعد الضريبة)</strong></td>
+                            <td><strong>$328,067,374</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container" style="background: linear-gradient(135deg, rgba(184, 134, 11, 0.1) 0%, rgba(212, 175, 55, 0.05) 100%); border: 2px solid var(--primary-gold); padding: 30px;">
+                <h3 style="color: var(--primary-gold); text-align: center; margin-bottom: 20px;"><i class="fas fa-chart-line"></i> ملخص المؤشرات الرئيسية</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>المؤشر</th>
+                            <th>القيمة</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>إجمالي الخام (بحد قطع 0.8 جرام/طن)</td>
+                            <td>18,337,590 طن</td>
+                        </tr>
+                        <tr>
+                            <td>العيار</td>
+                            <td>1.46 جرام/طن</td>
+                        </tr>
+                        <tr>
+                            <td>الذهب القابل للاستخلاص</td>
+                            <td>860,769 أونصة</td>
+                        </tr>
+                        <tr>
+                            <td>نسبة الاستخلاص</td>
+                            <td>80%</td>
+                        </tr>
+                        <tr>
+                            <td>عمر المنجم</td>
+                            <td>8.5 سنوات</td>
+                        </tr>
+                        <tr>
+                            <td>الإنتاج السنوي</td>
+                            <td>81,072 أونصة/سنة</td>
+                        </tr>
+                        <tr>
+                            <td>التكاليف الرأسمالية</td>
+                            <td>$136.2 مليون</td>
+                        </tr>
+                        <tr>
+                            <td>التكاليف التشغيلية</td>
+                            <td>$515.2 مليون (إجمالي)</td>
+                        </tr>
+                        <tr>
+                            <td>نسبة التجريد</td>
+                            <td>12.45</td>
+                        </tr>
+                        <tr>
+                            <td>معدل المعالجة</td>
+                            <td>200 طن/ساعة</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Infrastructure Section -->
+    <section class="content-section section">
+        <div class="container">
+            <div class="section-title">
+                <h2>البنية التحتية والمتطلبات</h2>
+            </div>
+
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3><i class="fas fa-road"></i> البنية الأساسية</h3>
+                    <ul>
+                        <li>طرق تشغيلية داخلية</li>
+                        <li>نظام إدارة المياه</li>
+                        <li>نظام تخزين الوقود</li>
+                        <li>ورش الصيانة والتشغيل</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3><i class="fas fa-bolt"></i> الطاقة والاتصالات</h3>
+                    <ul>
+                        <li>مولدات الطاقة الاحتياطية</li>
+                        <li>شبكة اتصالات داخلية</li>
+                        <li>أنظمة الأمن والمراقبة</li>
+                        <li>مقرات تشغيلية مؤقتة</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3><i class="fas fa-leaf"></i> الجوانب البيئية</h3>
+                    <ul>
+                        <li>إجراءات الصحة والسلامة</li>
+                        <li>مبادئ الإغلاق وإعادة التأهيل</li>
+                        <li>مشاركة الأطراف المعنية</li>
+                        <li>الممارسات المستدامة</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusions Section -->
+    <section class="content-section section" style="background: var(--light-bg);">
+        <div class="container">
+            <div class="section-title">
+                <h2>الخلاصات والتوصيات</h2>
+                <p>توصيات استراتيجية لتطوير المشروع</p>
+            </div>
+
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3><i class="fas fa-lightbulb"></i> التوصيات الرئيسية</h3>
+                    <ul>
+                        <li>تنفيذ برامج حفر إضافية موسعة</li>
+                        <li>رفع مستوى التحقق من البيانات</li>
+                        <li>إجراء اختبارات ميتالورجية متقدمة</li>
+                        <li>تحديث النماذج الجيولوجية</li>
+                        <li>تحسين دقة تقدير الموارد</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3><i class="fas fa-chart-bar"></i> الجوانب المالية</h3>
+                    <ul>
+                        <li>تقدير النفقات الرأسمالية</li>
+                        <li>تحليل النفقات التشغيلية</li>
+                        <li>نموذج التدفق النقدي</li>
+                        <li>تقدير العوائد المحتملة</li>
+                        <li>تحليل الجدوى الاقتصادية</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3><i class="fas fa-forward"></i> الخطوات القادمة</h3>
+                    <ul>
+                        <li>دراسة جدوى تفصيلية</li>
+                        <li>تطوير خطة التعدين</li>
+                        <li>الحصول على التراخيص</li>
+                        <li>تأمين التمويل</li>
+                        <li>بدء المرحلة التنفيذية</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section" style="background: linear-gradient(135deg, var(--primary-gold) 0%, var(--secondary-gold) 100%); color: var(--white);">
+        <div class="container">
+            <div class="section-title" style="color: var(--white);">
+                <h2 style="color: var(--white);">تواصل معنا</h2>
+                <p style="color: rgba(255,255,255,0.9);">للحصول على مزيد من المعلومات حول هذه الفرصة الاستثمارية</p>
+            </div>
+
+            <div style="text-align: center; font-size: 1.2rem;">
+                <div style="margin-bottom: 30px;">
+                    <img src="calx-logo-black2.png" alt="CALX Logo" style="height: 60px; filter: brightness(0) invert(1);">
+                </div>
+                <p style="margin-bottom: 20px;">
+                    <i class="fas fa-user" style="margin-left: 10px;"></i> 
+                    <strong>داني سيناي</strong> - مستشار المستثمر
+                </p>
+                <p style="margin-bottom: 20px; direction: ltr;">
+                    <a href="https://wa.me/966599343529" target="_blank" style="color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+                        <i class="fab fa-whatsapp" style="font-size: 1.4rem;"></i>
+                        <span>+966 59 934 3529</span>
+                    </a>
+                </p>
+                <p style="margin-bottom: 20px;">
+                    <i class="fas fa-globe" style="margin-left: 10px;"></i> 
+                    <a href="https://calx.sa" target="_blank" style="color: white; text-decoration: none;">calx.sa</a>
+                </p>
+                <p>
+                    <i class="fas fa-map-marker-alt" style="margin-left: 10px;"></i> 
+                    المملكة العربية السعودية - الرياض
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>عن المشروع</h3>
+                    <p>رحلة المستثمر لمشروع تعدين الذهب في غرب أفريقيا</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>روابط سريعة</h3>
+                    <a href="#overview">نظرة عامة</a>
+                    <a href="#data">البيانات الجيولوجية</a>
+                    <a href="#resources">الموارد المعدنية</a>
+                </div>
+
+                <div class="footer-section">
+                    <h3>معلومات الاتصال</h3>
+                    <p><i class="fas fa-user"></i> داني سيناي - مستشار المستثمر</p>
+                    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/966599343529" style="color: var(--white); text-decoration: none;">+966 59 934 3529</a></p>
+                    <p><i class="fas fa-globe"></i> <a href="https://calx.sa" target="_blank" style="color: var(--white); text-decoration: none;">calx.sa</a></p>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2025 مشروع تعدين الذهب | جميع الحقوق محفوظة</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Investor Dashboard Modal -->
+    <div id="dashboardModal" class="dashboard-modal">
+        <div class="dashboard-content">
+            <button class="dashboard-close" onclick="closeDashboard()">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="dashboard-header">
+                <h1><i class="fas fa-chart-line"></i> لوحة معلومات المستثمرين</h1>
+                <p>نظرة شاملة على المؤشرات المالية والتشغيلية الرئيسية</p>
+            </div>
+
+            <!-- Key Metrics -->
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <i class="fas fa-gem"></i>
+                    <div class="metric-value">860,769</div>
+                    <div class="metric-label">أونصة ذهب قابلة للاستخلاص</div>
+                </div>
+                <div class="dashboard-card">
+                    <i class="fas fa-dollar-sign"></i>
+                    <div class="metric-value">$1,257.7M</div>
+                    <div class="metric-label">إجمالي الإيرادات المتوقعة</div>
+                </div>
+                <div class="dashboard-card">
+                    <i class="fas fa-chart-line"></i>
+                    <div class="metric-value">1.46</div>
+                    <div class="metric-label">متوسط العيار (جرام/طن)</div>
+                </div>
+                <div class="dashboard-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <div class="metric-value">8.5</div>
+                    <div class="metric-label">سنوات عمر المشروع</div>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="chart-section">
+                <h2><i class="fas fa-chart-bar"></i> التحليل المالي والإنتاجي</h2>
+                
+                <div class="charts-grid">
+                    <!-- Cost Breakdown Chart -->
+                    <div class="chart-container">
+                        <h3>توزيع التكاليف الرأسمالية (CAPEX)</h3>
+                        <div class="bar-chart">
+                            <div class="bar" style="height: 26%;">
+                                <span class="bar-value">$14.5M</span>
+                                <span class="bar-label">الحفر والتحليل</span>
+                            </div>
+                            <div class="bar" style="height: 100%;">
+                                <span class="bar-value">$54.9M</span>
+                                <span class="bar-label">المعدات</span>
+                            </div>
+                            <div class="bar" style="height: 80%;">
+                                <span class="bar-value">$43.9M</span>
+                                <span class="bar-label">الطرق</span>
+                            </div>
+                            <div class="bar" style="height: 18%;">
+                                <span class="bar-value">$9.7M</span>
+                                <span class="bar-label">الأراضي</span>
+                            </div>
+                            <div class="bar" style="height: 12%;">
+                                <span class="bar-value">$6.7M</span>
+                                <span class="bar-label">التوطين</span>
+                            </div>
+                            <div class="bar" style="height: 12%;">
+                                <span class="bar-value">$6.5M</span>
+                                <span class="bar-label">الطوارئ</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Production Chart -->
+                    <div class="chart-container">
+                        <h3>معدلات الإنتاج والاستخلاص</h3>
+                        <div class="bar-chart">
+                            <div class="bar" style="height: 100%; background: linear-gradient(to top, #28a745, #5cb85c);">
+                                <span class="bar-value">81,072</span>
+                                <span class="bar-label">إنتاج سنوي (أونصة)</span>
+                            </div>
+                            <div class="bar" style="height: 80%; background: linear-gradient(to top, #B8860B, #D4AF37);">
+                                <span class="bar-value">80%</span>
+                                <span class="bar-label">نسبة الاستخلاص</span>
+                            </div>
+                        </div>
+                        <div class="legend">
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #28a745;"></div>
+                                <span>إنتاج سنوي: 81,072 أونصة</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: var(--primary-gold);"></div>
+                                <span>نسبة استخلاص: 80%</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #6c757d;"></div>
+                                <span>معالجة: 2,160,000 طن/سنة</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Revenue vs Costs -->
+                    <div class="chart-container">
+                        <h3>الإيرادات مقابل التكاليف (مليون دولار)</h3>
+                        <div class="bar-chart">
+                            <div class="bar" style="height: 100%; background: linear-gradient(to top, #28a745, #5cb85c);">
+                                <span class="bar-value">$1,257.7</span>
+                                <span class="bar-label">الإيرادات</span>
+                            </div>
+                            <div class="bar" style="height: 41%; background: linear-gradient(to top, #ffc107, #ffdb4d);">
+                                <span class="bar-value">$515.2</span>
+                                <span class="bar-label">OPEX</span>
+                            </div>
+                            <div class="bar" style="height: 22%; background: linear-gradient(to top, #dc3545, #ff6b6b);">
+                                <span class="bar-value">$274.1</span>
+                                <span class="bar-label">الضرائب</span>
+                            </div>
+                            <div class="bar" style="height: 11%; background: linear-gradient(to top, #ff6b6b, #ff8c8c);">
+                                <span class="bar-value">$136.2</span>
+                                <span class="bar-label">CAPEX</span>
+                            </div>
+                            <div class="bar" style="height: 26%; background: linear-gradient(to top, var(--primary-gold), var(--secondary-gold));">
+                                <span class="bar-value">$328.1</span>
+                                <span class="bar-label">الصافي</span>
+                            </div>
+                        </div>
+                        <div class="legend">
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #28a745;"></div>
+                                <span>إجمالي الإيرادات: $1,257.7M</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #ffc107;"></div>
+                                <span>التكاليف التشغيلية: $515.2M</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #dc3545;"></div>
+                                <span>إيرادات الدولة والضرائب: $274.1M</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #ff6b6b;"></div>
+                                <span>التكاليف الرأسمالية: $136.2M</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: var(--primary-gold);"></div>
+                                <span>صافي التدفق النقدي: $328.1M</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Key Resources -->
+                    <div class="chart-container">
+                        <h3>الموارد الرئيسية</h3>
+                        <div style="padding: 20px;">
+                            <div class="legend">
+                                <div class="legend-item">
+                                    <div class="legend-color" style="background: var(--primary-gold);"></div>
+                                    <span><strong>18,337,590</strong> طن خام إجمالي</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color" style="background: #28a745;"></div>
+                                    <span><strong>1.46</strong> جرام/طن متوسط العيار</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color" style="background: #17a2b8;"></div>
+                                    <span><strong>80%</strong> نسبة الاستخلاص</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color" style="background: #ffc107;"></div>
+                                    <span><strong>12.45</strong> نسبة التجريد</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color" style="background: #6c757d;"></div>
+                                    <span><strong>200</strong> طن/ساعة معدل المعالجة</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Financial Summary -->
+            <div class="financial-summary">
+                <h2><i class="fas fa-wallet"></i> الملخص المالي</h2>
+                <div class="financial-grid">
+                    <div class="financial-item">
+                        <i class="fas fa-hand-holding-usd" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                        <div class="amount">$136.2M</div>
+                        <div class="description">التكاليف الرأسمالية الإجمالية</div>
+                    </div>
+                    <div class="financial-item">
+                        <i class="fas fa-cogs" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                        <div class="amount">$515.2M</div>
+                        <div class="description">التكاليف التشغيلية الإجمالية</div>
+                    </div>
+                    <div class="financial-item">
+                        <i class="fas fa-chart-line" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                        <div class="amount">$1,257.7M</div>
+                        <div class="description">إجمالي الإيرادات المتوقعة</div>
+                    </div>
+                    <div class="financial-item">
+                        <i class="fas fa-trophy" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                        <div class="amount">$328.1M</div>
+                        <div class="description">صافي التدفق النقدي بعد الضريبة</div>
+                    </div>
+                    <div class="financial-item">
+                        <i class="fas fa-university" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                        <div class="amount">$274.1M</div>
+                        <div class="description">إيرادات الدولة والضرائب</div>
+                    </div>
+                    <div class="financial-item">
+                        <i class="fas fa-dollar-sign" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                        <div class="amount">$1,500</div>
+                        <div class="description">سعر الذهب المرجعي/أونصة</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Language switcher toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const langSwitcher = document.querySelector('.language-switcher');
+            const langBtn = document.querySelector('.lang-btn');
+            
+            if (langBtn) {
+                langBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    langSwitcher.classList.toggle('active');
+                });
+            }
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function() {
+                langSwitcher.classList.remove('active');
+            });
+        });
+
+        function openDashboard() {
+            document.getElementById('dashboardModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDashboard() {
+            document.getElementById('dashboardModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close on ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeDashboard();
+            }
+        });
+
+        // Close on outside click
+        document.getElementById('dashboardModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeDashboard();
+            }
+        });
+    </script>
+
+</body>
+</html>

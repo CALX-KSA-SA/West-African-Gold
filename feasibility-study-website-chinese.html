@@ -1,0 +1,2237 @@
+<!DOCTYPE html>
+<html lang="zh-CN" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta name="version" content="2.0-20251207">
+    <meta name="theme-color" content="#B8860B">
+    <meta name="description" content="西非黄金采矿投资 - 860,769盎司可采黄金，3.28亿美元净回报">
+    <title>黄金矿业项目可行性研究 | 西非</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@400;500;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-gold: #B8860B;
+            --secondary-gold: #D4AF37;
+            --dark-bg: #1A1A1A;
+            --light-bg: #F5F5F5;
+            --text-dark: #2C2C2C;
+            --text-light: #666666;
+            --white: #FFFFFF;
+            --border: #E0E0E0;
+            --success: #28A745;
+            --info: #17A2B8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', 'Microsoft YaHei', 'PingFang SC', 'Hiragino Sans GB', 'Source Han Sans CN', sans-serif;
+            background: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.8;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--dark-bg) 0%, #2A2A2A 100%);
+            padding: 25px 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .logo span {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-gold);
+            transition: width 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary-gold);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .dashboard-btn {
+            background: linear-gradient(135deg, #0066B2, #1C69D4);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 15px rgba(0, 102, 178, 0.3);
+        }
+
+        .dashboard-btn i {
+            background: linear-gradient(135deg, #FFD700, #FFA500, #FF69B4, #00CED1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 1.1rem;
+            animation: colorShift 3s ease-in-out infinite;
+        }
+
+        @keyframes colorShift {
+            0%, 100% { filter: hue-rotate(0deg); }
+            50% { filter: hue-rotate(30deg); }
+        }
+
+        .dashboard-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 102, 178, 0.5);
+            background: linear-gradient(135deg, #004C8C, #0066B2);
+        }
+
+        /* Language Switcher */
+        .language-switcher {
+            position: relative;
+            display: inline-block;
+        }
+
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            padding: 8px 15px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+
+        .lang-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: var(--secondary-gold);
+        }
+
+        .lang-dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 5px;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            min-width: 150px;
+            z-index: 1000;
+            padding: 5px 0;
+        }
+
+        .language-switcher.active .lang-dropdown {
+            display: block;
+        }
+
+        .lang-option {
+            padding: 12px 20px;
+            color: var(--text-dark);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .lang-option:last-child {
+            border-bottom: none;
+        }
+
+        .lang-option:hover {
+            background: var(--light-bg);
+            color: var(--primary-gold);
+        }
+
+        .lang-option.active {
+            background: linear-gradient(135deg, rgba(184, 134, 11, 0.1), rgba(212, 175, 55, 0.1));
+            color: var(--primary-gold);
+            font-weight: 700;
+        }
+
+        /* Dashboard Modal */
+        .dashboard-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            overflow-y: auto;
+        }
+
+        .dashboard-modal.active {
+            display: block;
+        }
+
+        .dashboard-content {
+            max-width: 1600px;
+            margin: 40px auto;
+            padding: 40px;
+            background: var(--white);
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .dashboard-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #dc3545;
+            color: var(--white);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+
+        .dashboard-close:hover {
+            background: #c82333;
+            transform: rotate(90deg);
+        }
+
+        .dashboard-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .dashboard-header h1 {
+            font-size: 2.5rem;
+            color: var(--dark-bg);
+            margin-bottom: 10px;
+        }
+
+        .dashboard-header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .dashboard-card {
+            background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold));
+            padding: 30px;
+            border-radius: 15px;
+            color: var(--white);
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(184, 134, 11, 0.3);
+        }
+
+        .dashboard-card i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .metric-label {
+            font-size: 1rem;
+            opacity: 0.95;
+        }
+
+        .chart-section {
+            margin-top: 40px;
+        }
+
+        .chart-section h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--dark-bg);
+            margin-bottom: 30px;
+        }
+
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .chart-container {
+            background: var(--white);
+            border: 2px solid var(--border);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .chart-container h3 {
+            font-size: 1.3rem;
+            color: var(--dark-bg);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .bar-chart {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            height: 300px;
+            gap: 10px;
+            padding: 20px 0;
+        }
+
+        .bar {
+            flex: 1;
+            background: linear-gradient(to top, var(--primary-gold), var(--secondary-gold));
+            border-radius: 8px 8px 0 0;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding-top: 10px;
+            min-height: 60px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .bar-value {
+            font-weight: 700;
+            color: var(--white);
+            font-size: 0.9rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .bar-label {
+            position: absolute;
+            bottom: -50px;
+            width: 100%;
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .legend {
+            margin-top: 60px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+        }
+
+        .financial-summary {
+            margin-top: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(184, 134, 11, 0.1), rgba(212, 175, 55, 0.05));
+            border-radius: 15px;
+            border: 2px solid var(--primary-gold);
+        }
+
+        .financial-summary h2 {
+            text-align: center;
+            color: var(--dark-bg);
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        .financial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .financial-item {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .financial-item i {
+            color: var(--primary-gold);
+        }
+
+        .financial-item .amount {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary-gold);
+            margin: 10px 0;
+        }
+
+        .financial-item .description {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(184, 134, 11, 0.95), rgba(212, 175, 55, 0.9)),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%231A1A1A" width="1200" height="600"/></svg>');
+            background-size: cover;
+            background-position: center;
+            padding: 150px 0 100px;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--white);
+            color: var(--primary-gold);
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Sections */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.8rem;
+            color: var(--dark-bg);
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .section-title p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold));
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            color: var(--white);
+            box-shadow: 0 8px 25px rgba(184, 134, 11, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .stat-card i {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .stat-card .value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .stat-card .label {
+            font-size: 1rem;
+            opacity: 0.95;
+        }
+
+        /* Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .content-card {
+            background: var(--white);
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid var(--primary-gold);
+        }
+
+        .content-card h3 {
+            font-size: 1.5rem;
+            color: var(--dark-bg);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .content-card h3 i {
+            color: var(--primary-gold);
+        }
+
+        .content-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .content-card li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            color: var(--text-light);
+        }
+
+        .content-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-gold);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        /* Tables */
+        .table-section {
+            padding: 80px 0;
+            background: var(--white);
+        }
+
+        .table-container {
+            margin-bottom: 60px;
+            background: var(--white);
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            overflow-x: auto;
+        }
+
+        .table-container h3 {
+            font-size: 1.8rem;
+            color: var(--dark-bg);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .table-container h3 i {
+            color: var(--primary-gold);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        thead {
+            background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold));
+            color: var(--white);
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid var(--border);
+        }
+
+        th {
+            font-weight: 700;
+            font-size: 1rem;
+        }
+
+        tbody tr:hover {
+            background: rgba(184, 134, 11, 0.05);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--dark-bg);
+            color: var(--white);
+            padding: 50px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--secondary-gold);
+        }
+
+        .footer-section p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            display: block;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--secondary-gold);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .container {
+                max-width: 100%;
+                padding: 0 15px;
+            }
+            
+            .stats-grid,
+            .content-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            .logo span {
+                font-size: 0.9rem;
+            }
+
+            nav ul {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 10px;
+                justify-content: center;
+            }
+
+            nav a {
+                font-size: 0.85rem;
+            }
+
+            .dashboard-btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+                line-height: 1.2;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+
+            .section-title p {
+                font-size: 0.95rem;
+            }
+
+            .stats-grid,
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .stat-card {
+                padding: 20px;
+            }
+
+            .stat-card .value {
+                font-size: 2rem;
+            }
+
+            .charts-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .table-container {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            table {
+                font-size: 0.85rem;
+                min-width: 600px;
+            }
+
+            th, td {
+                padding: 10px 8px;
+            }
+
+            .dashboard-modal {
+                width: 95%;
+                max-width: 95%;
+                height: 95vh;
+                padding: 15px;
+            }
+
+            .dashboard-header h2 {
+                font-size: 1.5rem;
+            }
+
+            .metric-card h3 {
+                font-size: 0.85rem;
+            }
+
+            .metric-value {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 1.6rem;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+            }
+
+            .section-title h2 {
+                font-size: 1.5rem;
+            }
+
+            .cta-button {
+                padding: 12px 30px;
+                font-size: 0.9rem;
+            }
+
+            .stat-card .value {
+                font-size: 1.6rem;
+            }
+
+            .stat-card .label {
+                font-size: 0.85rem;
+            }
+
+            table {
+                font-size: 0.75rem;
+            }
+
+            th, td {
+                padding: 8px 5px;
+            }
+        }
+
+        /* Performance optimizations */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="calx-logo-black2.png" alt="CALX Logo" style="filter: brightness(0) invert(1);">
+                    <span>投资者黄金之旅</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#overview">项目概览</a></li>
+                        <li><a href="#data">数据资料</a></li>
+                        <li><a href="#resources">矿产资源</a></li>
+                        <li><a href="#contact">联系我们</a></li>
+                    </ul>
+                </nav>
+                <div class="language-switcher">
+                    <button class="lang-btn">
+                        <i class="fas fa-globe"></i>
+                        <span>中文</span>
+                    </button>
+                    <div class="lang-dropdown">
+                        <a href="feasibility-study-website.html" class="lang-option">
+                            <span>🇸🇦</span>
+                            <span>العربية</span>
+                        </a>
+                        <a href="feasibility-study-website-english.html" class="lang-option">
+                            <span>🇬🇧</span>
+                            <span>English</span>
+                        </a>
+                        <a href="feasibility-study-website-chinese.html" class="lang-option active">
+                            <span>🇨🇳</span>
+                            <span>中文</span>
+                        </a>
+                    </div>
+                </div>
+                <button class="dashboard-btn" onclick="openDashboard()">
+                    <i class="fas fa-chart-pie"></i>
+                    <span>投资者仪表盘</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>投资者的西非黄金之旅</h1>
+                <p>专属投资机会：86万盎司黄金，8.5年内净收益3.28亿美元</p>
+                <a href="#overview" class="cta-button">探索项目</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>项目概览</h2>
+                <p>基于科学方法的全面评估，确保最高精准度和透明度标准</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-gem"></i>
+                    <div class="value">860,769</div>
+                    <div class="label">可采黄金（盎司）</div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-chart-line"></i>
+                    <div class="value">1.46</div>
+                    <div class="label">平均品位（克/吨）</div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-industry"></i>
+                    <div class="value">18,337,590</div>
+                    <div class="label">矿石总量（吨）</div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-calendar-alt"></i>
+                    <div class="value">~8.5</div>
+                    <div class="label">项目周期（年）</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="content-section section">
+        <div class="container">
+            <div class="section-title">
+                <h2>研究背景与目标</h2>
+            </div>
+
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3><i class="fas fa-flag"></i> 项目核心目标</h3>
+                    <ul>
+                        <li>明确矿产资源潜力</li>
+                        <li>优化长期规划</li>
+                        <li>提升投资决策准确性</li>
+                        <li>建立可持续运营模式</li>
+                        <li>保障环境和社会责任</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3><i class="fas fa-tasks"></i> 研究范围</h3>
+                    <ul>
+                        <li>精准矿产资源评估</li>
+                        <li>地质结构分析</li>
+                        <li>制定运营标准</li>
+                        <li>规划基础设施需求</li>
+                        <li>估算全面成本</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3><i class="fas fa-microscope"></i> 方法论</h3>
+                    <ul>
+                        <li>先进地质测量设备</li>
+                        <li>GIS 地理信息系统</li>
+                        <li>高精度取样工具</li>
+                        <li>严格质量控制</li>
+                        <li>全面数据记录</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Geological Data Section -->
+    <section class="content-section section" style="background: var(--light-bg);">
+        <div class="container">
+            <div class="section-title">
+                <h2>地质数据</h2>
+                <p>岩石构造与矿产资源精准分析</p>
+            </div>
+
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3><i class="fas fa-mountain"></i> 主要地质构造</h3>
+                    <ul>
+                        <li>花岗岩类侵入岩</li>
+                        <li>火山—沉积岩组合</li>
+                        <li>变质岩群</li>
+                        <li>多种剪切带与断裂结构</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3><i class="fas fa-gem"></i> 主要矿化类型</h3>
+                    <ul>
+                        <li>黄铁矿</li>
+                        <li>黄铜矿</li>
+                        <li>毒砂（砷黄铁矿）</li>
+                        <li>二氧化硅及伴生矿物</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3><i class="fas fa-search"></i> 历史工作</h3>
+                    <ul>
+                        <li>全面地球化学调查</li>
+                        <li>航磁与航放射性测量</li>
+                        <li>多轮钻探活动</li>
+                        <li>国际标准分析流程</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Table Section -->
+    <section id="resources" class="table-section">
+        <div class="container">
+            <div class="section-title">
+                <h2 id="data">矿产资源估算</h2>
+                <p>基于地质数据按不同品位 Cut-off 进行精准资源估算</p>
+            </div>
+
+            <div class="table-container">
+                <h3><i class="fas fa-table"></i> 表1：黄金潜力（不考虑 Cut-off）</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>品位 (g/t)</th>
+                            <th>体积 (m³)</th>
+                            <th>重量 (吨)</th>
+                            <th>平均品位 (g/t)</th>
+                            <th>产量 (盎司)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0.0 → 0.25</td>
+                            <td>703,650</td>
+                            <td>1,899,855</td>
+                            <td>0.25</td>
+                            <td>15,270</td>
+                        </tr>
+                        <tr>
+                            <td>0.25 → 0.5</td>
+                            <td>20,435,500</td>
+                            <td>55,175,850</td>
+                            <td>0.34</td>
+                            <td>603,142</td>
+                        </tr>
+                        <tr>
+                            <td>0.5 → 1.0</td>
+                            <td>8,990,050</td>
+                            <td>24,273,135</td>
+                            <td>0.69</td>
+                            <td>538,476</td>
+                        </tr>
+                        <tr>
+                            <td>1.0 → 1.5</td>
+                            <td>2,286,000</td>
+                            <td>6,172,200</td>
+                            <td>1.2</td>
+                            <td>238,129</td>
+                        </tr>
+                        <tr>
+                            <td>1.5 → 2.0</td>
+                            <td>1,168,550</td>
+                            <td>3,155,085</td>
+                            <td>1.73</td>
+                            <td>175,488</td>
+                        </tr>
+                        <tr>
+                            <td>2.0 → 999.0</td>
+                            <td>1,076,500</td>
+                            <td>2,906,550</td>
+                            <td>2.9</td>
+                            <td>270,999</td>
+                        </tr>
+                        <tr style="background: rgba(184, 134, 11, 0.15); font-weight: 700; font-size: 1.15rem;">
+                            <td><strong>总计</strong></td>
+                            <td><strong>34,660,250</strong></td>
+                            <td><strong>93,582,675</strong></td>
+                            <td><strong>0.61</strong></td>
+                            <td><strong>1,835,341</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3><i class="fas fa-table"></i> 表2：0.5 g/t Cut-off 资源量</h3>
+                <p style="margin-bottom: 20px; color: var(--text-light); font-style: italic;">
+                    (0.5 g/t Cut-off 资源量)
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>品位 (g/t)</th>
+                            <th>体积 (m³)</th>
+                            <th>重量 (吨)</th>
+                            <th>平均品位 (g/t)</th>
+                            <th>产量 (盎司)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0.25 → 0.5</td>
+                            <td>245,150</td>
+                            <td>661,905</td>
+                            <td>0.5</td>
+                            <td>10,640</td>
+                        </tr>
+                        <tr>
+                            <td>0.5 → 1.0</td>
+                            <td>8,990,050</td>
+                            <td>24,273,135</td>
+                            <td>0.69</td>
+                            <td>538,476</td>
+                        </tr>
+                        <tr>
+                            <td>1.0 → 1.5</td>
+                            <td>2,286,000</td>
+                            <td>6,172,200</td>
+                            <td>1.2</td>
+                            <td>238,129</td>
+                        </tr>
+                        <tr>
+                            <td>1.5 → 2.0</td>
+                            <td>1,168,550</td>
+                            <td>3,155,085</td>
+                            <td>1.73</td>
+                            <td>175,488</td>
+                        </tr>
+                        <tr>
+                            <td>2.0 → 999</td>
+                            <td>1,076,500</td>
+                            <td>2,906,550</td>
+                            <td>2.9</td>
+                            <td>270,999</td>
+                        </tr>
+                        <tr style="background: rgba(184, 134, 11, 0.1); font-weight: 700;">
+                            <td><strong>总计</strong></td>
+                            <td><strong>13,766,250</strong></td>
+                            <td><strong>37,168,875</strong></td>
+                            <td><strong>1.03</strong></td>
+                            <td><strong>1,230,858</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3><i class="fas fa-table"></i> 表3：0.8 g/t Cut-off 资源量（主要运营场景）</h3>
+                <p style="margin-bottom: 20px; color: var(--text-light); font-style: italic;">
+                    (主要运营场景)
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>品位 (g/t)</th>
+                            <th>体积 (m³)</th>
+                            <th>重量 (吨)</th>
+                            <th>平均品位 (g/t)</th>
+                            <th>产量 (盎司)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0.5 → 1.0</td>
+                            <td>2,260,650</td>
+                            <td>6,103,755</td>
+                            <td>0.89</td>
+                            <td>174,654</td>
+                        </tr>
+                        <tr>
+                            <td>1.0 → 1.5</td>
+                            <td>2,286,000</td>
+                            <td>6,172,200</td>
+                            <td>1.2</td>
+                            <td>238,129</td>
+                        </tr>
+                        <tr>
+                            <td>1.5 → 2.0</td>
+                            <td>1,168,550</td>
+                            <td>3,155,085</td>
+                            <td>1.73</td>
+                            <td>175,488</td>
+                        </tr>
+                        <tr>
+                            <td>2.0 → 999</td>
+                            <td>1,076,500</td>
+                            <td>2,906,550</td>
+                            <td>2.9</td>
+                            <td>270,999</td>
+                        </tr>
+                        <tr style="background: rgba(184, 134, 11, 0.1); font-weight: 700;">
+                            <td><strong>总计</strong></td>
+                            <td><strong>6,791,700</strong></td>
+                            <td><strong>18,337,590</strong></td>
+                            <td><strong>1.46</strong></td>
+                            <td><strong>860,769</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3><i class="fas fa-table"></i> 表4：1.0 g/t Cut-off 资源量</h3>
+                <p style="margin-bottom: 20px; color: var(--text-light); font-style: italic;">
+                    (1.0 g/t Cut-off 资源量)
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>品位 (g/t)</th>
+                            <th>体积 (m³)</th>
+                            <th>重量 (吨)</th>
+                            <th>平均品位 (g/t)</th>
+                            <th>产量 (盎司)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0.5 → 1.0</td>
+                            <td>27,550</td>
+                            <td>74,385</td>
+                            <td>1.0</td>
+                            <td>2,392</td>
+                        </tr>
+                        <tr>
+                            <td>1.0 → 1.5</td>
+                            <td>2,286,000</td>
+                            <td>6,172,200</td>
+                            <td>1.2</td>
+                            <td>238,129</td>
+                        </tr>
+                        <tr>
+                            <td>1.5 → 2.0</td>
+                            <td>1,168,550</td>
+                            <td>3,155,085</td>
+                            <td>1.73</td>
+                            <td>175,488</td>
+                        </tr>
+                        <tr>
+                            <td>2.0 → 999</td>
+                            <td>1,076,500</td>
+                            <td>2,906,550</td>
+                            <td>2.9</td>
+                            <td>270,999</td>
+                        </tr>
+                        <tr style="background: rgba(184, 134, 11, 0.1); font-weight: 700;">
+                            <td><strong>总计</strong></td>
+                            <td><strong>4,558,600</strong></td>
+                            <td><strong>12,308,220</strong></td>
+                            <td><strong>1.73</strong></td>
+                            <td><strong>684,594</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3><i class="fas fa-table"></i> 表5：年产量模拟（月度明细）</h3>
+                <p style="margin-bottom: 20px; color: var(--text-light); font-style: italic;">
+                    (年产量模拟 - 月度明细)
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>月份</th>
+                            <th>吨位</th>
+                            <th>品位 (g/t)</th>
+                            <th>回收率 (%)</th>
+                            <th>黄金 (克)</th>
+                            <th>黄金 (盎司)</th>
+                            <th>价格 ($/盎司)</th>
+                            <th>价值（美元）</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>一月</td>
+                            <td>180,000</td>
+                            <td>1.46</td>
+                            <td>80%</td>
+                            <td>210,240</td>
+                            <td>6,756</td>
+                            <td>1,500</td>
+                            <td>$10,134,002</td>
+                        </tr>
+                        <tr>
+                            <td>二月</td>
+                            <td>180,000</td>
+                            <td>1.46</td>
+                            <td>80%</td>
+                            <td>210,240</td>
+                            <td>6,756</td>
+                            <td>1,500</td>
+                            <td>$10,134,002</td>
+                        </tr>
+                        <tr>
+                            <td>三月</td>
+                            <td>180,000</td>
+                            <td>1.46</td>
+                            <td>80%</td>
+                            <td>210,240</td>
+                            <td>6,756</td>
+                            <td>1,500</td>
+                            <td>$10,134,002</td>
+                        </tr>
+                        <tr>
+                            <td>四月</td>
+                            <td>180,000</td>
+                            <td>1.46</td>
+                            <td>80%</td>
+                            <td>210,240</td>
+                            <td>6,756</td>
+                            <td>1,500</td>
+                            <td>$10,134,002</td>
+                        </tr>
+                        <tr>
+                            <td>五月</td>
+                            <td>180,000</td>
+                            <td>1.46</td>
+                            <td>80%</td>
+                            <td>210,240</td>
+                            <td>6,756</td>
+                            <td>1,500</td>
+                            <td>$10,134,002</td>
+                        </tr>
+                        <tr>
+                            <td>六月</td>
+                            <td>180,000</td>
+                            <td>1.46</td>
+                            <td>80%</td>
+                            <td>210,240</td>
+                            <td>6,756</td>
+                            <td>1,500</td>
+                            <td>$10,134,002</td>
+                        </tr>
+                        <tr>
+                            <td>七月</td>
+                            <td>180,000</td>
+                            <td>1.46</td>
+                            <td>80%</td>
+                            <td>210,240</td>
+                            <td>6,756</td>
+                            <td>1,500</td>
+                            <td>$10,134,002</td>
+                        </tr>
+                        <tr>
+                            <td>八月</td>
+                            <td>180,000</td>
+                            <td>1.46</td>
+                            <td>80%</td>
+                            <td>210,240</td>
+                            <td>6,756</td>
+                            <td>1,500</td>
+                            <td>$10,134,002</td>
+                        </tr>
+                        <tr>
+                            <td>九月</td>
+                            <td>180,000</td>
+                            <td>1.46</td>
+                            <td>80%</td>
+                            <td>210,240</td>
+                            <td>6,756</td>
+                            <td>1,500</td>
+                            <td>$10,134,002</td>
+                        </tr>
+                        <tr>
+                            <td>十月</td>
+                            <td>180,000</td>
+                            <td>1.46</td>
+                            <td>80%</td>
+                            <td>210,240</td>
+                            <td>6,756</td>
+                            <td>1,500</td>
+                            <td>$10,134,002</td>
+                        </tr>
+                        <tr>
+                            <td>十一月</td>
+                            <td>180,000</td>
+                            <td>1.46</td>
+                            <td>80%</td>
+                            <td>210,240</td>
+                            <td>6,756</td>
+                            <td>1,500</td>
+                            <td>$10,134,002</td>
+                        </tr>
+                        <tr>
+                            <td>十二月</td>
+                            <td>180,000</td>
+                            <td>1.46</td>
+                            <td>80%</td>
+                            <td>210,240</td>
+                            <td>6,756</td>
+                            <td>1,500</td>
+                            <td>$10,134,002</td>
+                        </tr>
+                        <tr style="background: rgba(184, 134, 11, 0.1); font-weight: 700;">
+                            <td><strong>总计</strong></td>
+                            <td><strong>2,160,000</strong></td>
+                            <td><strong>—</strong></td>
+                            <td><strong>—</strong></td>
+                            <td><strong>2,522,880</strong></td>
+                            <td><strong>81,072</strong></td>
+                            <td><strong>—</strong></td>
+                            <td><strong>$121,608,021</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3><i class="fas fa-table"></i> 表6：资本成本 (CAPEX)</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>项目</th>
+                            <th>成本（美元）</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>居民搬迁</td>
+                            <td>$6,726,000</td>
+                        </tr>
+                        <tr>
+                            <td>钻探与化验</td>
+                            <td>$14,514,000</td>
+                        </tr>
+                        <tr>
+                            <td>设备采购与租赁</td>
+                            <td>$54,870,000</td>
+                        </tr>
+                        <tr>
+                            <td>道路建设与维护</td>
+                            <td>$43,896,000</td>
+                        </tr>
+                        <tr>
+                            <td>土地准备</td>
+                            <td>$9,735,000</td>
+                        </tr>
+                        <tr>
+                            <td>小计</td>
+                            <td>$129,741,000</td>
+                        </tr>
+                        <tr>
+                            <td>预备金 (5%)</td>
+                            <td>$6,487,050</td>
+                        </tr>
+                        <tr style="background: rgba(184, 134, 11, 0.1); font-weight: 700;">
+                            <td><strong>总计</strong></td>
+                            <td><strong>$136,228,050</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3><i class="fas fa-table"></i> 表7：运营成本 (OPEX) - 每吨成本明细</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>成本类别</th>
+                            <th>美元/吨</th>
+                            <th>总计（美元）</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>矿石开采</td>
+                            <td>$2.50</td>
+                            <td>$45,843,975</td>
+                        </tr>
+                        <tr>
+                            <td>选矿成本</td>
+                            <td>$17.41</td>
+                            <td>$319,257,442</td>
+                        </tr>
+                        <tr>
+                            <td>环境复垦</td>
+                            <td>$0.30</td>
+                            <td>$5,501,277</td>
+                        </tr>
+                        <tr>
+                            <td>冶炼与销售</td>
+                            <td>$4.76 (每盎司)</td>
+                            <td>$4,097,260</td>
+                        </tr>
+                        <tr>
+                            <td>矿石堆存</td>
+                            <td>$0.38</td>
+                            <td>$6,968,284</td>
+                        </tr>
+                        <tr>
+                            <td>管理与行政费</td>
+                            <td>$5.28</td>
+                            <td>$96,822,475</td>
+                        </tr>
+                        <tr>
+                            <td>运输（外包）</td>
+                            <td>$0.20 每吨/公里</td>
+                            <td>$36,675,180</td>
+                        </tr>
+                        <tr style="background: rgba(184, 134, 11, 0.1); font-weight: 700;">
+                            <td><strong>总计</strong></td>
+                            <td><strong>—</strong></td>
+                            <td><strong>$515,165,894</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3><i class="fas fa-table"></i> 表8：所需设备规格</h3>
+                <p style="margin-bottom: 20px; color: var(--text-light); font-style: italic;">
+                    (设备规格 - 待采购/租赁)
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>类别</th>
+                            <th>设备类型</th>
+                            <th>规格</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: rgba(184, 134, 11, 0.05); font-weight: 600;">
+                            <td colspan="3"><strong>采矿作业</strong></td>
+                        </tr>
+                        <tr>
+                            <td>钻探</td>
+                            <td>钻机</td>
+                            <td>Atlas Copco L7 / L8</td>
+                        </tr>
+                        <tr>
+                            <td>开采</td>
+                            <td>液压挖掘机</td>
+                            <td>CAT RH90</td>
+                        </tr>
+                        <tr>
+                            <td>运输</td>
+                            <td>矿用卡车</td>
+                            <td>100吨容量</td>
+                        </tr>
+                        <tr>
+                            <td>排水</td>
+                            <td>排水泵</td>
+                            <td>Flygt 150 HP，100 m³/小时容量</td>
+                        </tr>
+                        <tr>
+                            <td>爆破</td>
+                            <td>爆破设备</td>
+                            <td>ANFO（硝酸铵燃料油）</td>
+                        </tr>
+                        <tr style="background: rgba(184, 134, 11, 0.05); font-weight: 600;">
+                            <td colspan="3"><strong>选矿厂</strong></td>
+                        </tr>
+                        <tr>
+                            <td>初级破碎</td>
+                            <td>半自磨机</td>
+                            <td>8.5米直径 × 4.35米，6 MW电机</td>
+                        </tr>
+                        <tr>
+                            <td>二级破碎</td>
+                            <td>球磨机</td>
+                            <td>6.10米 × 9.05米，75% 临界速度</td>
+                        </tr>
+                        <tr>
+                            <td>破碎</td>
+                            <td>圆锥破碎机</td>
+                            <td>按技术规格</td>
+                        </tr>
+                        <tr>
+                            <td>分离</td>
+                            <td>水力旋流器</td>
+                            <td>10台Krebs单元，380毫米直径</td>
+                        </tr>
+                        <tr>
+                            <td>筛分</td>
+                            <td>筛网</td>
+                            <td>按技术规格</td>
+                        </tr>
+                        <tr>
+                            <td>内部运输</td>
+                            <td>输送机</td>
+                            <td>按技术规格</td>
+                        </tr>
+                        <tr>
+                            <td>处理</td>
+                            <td>处理技术</td>
+                            <td>炭浸法 (CIL)</td>
+                        </tr>
+                        <tr style="background: rgba(184, 134, 11, 0.05); font-weight: 600;">
+                            <td colspan="3"><strong>基础设施</strong></td>
+                        </tr>
+                        <tr>
+                            <td>电力</td>
+                            <td>柴油发电机</td>
+                            <td>按电力需求</td>
+                        </tr>
+                        <tr>
+                            <td>储存</td>
+                            <td>柴油罐</td>
+                            <td>现场30,000升容量</td>
+                        </tr>
+                        <tr>
+                            <td>安全</td>
+                            <td>炸药储存</td>
+                            <td>符合安全标准</td>
+                        </tr>
+                        <tr>
+                            <td>维护</td>
+                            <td>维护车间</td>
+                            <td>维护设备和工具</td>
+                        </tr>
+                        <tr>
+                            <td>通讯</td>
+                            <td>通讯设备</td>
+                            <td>无线电、无线和互联网系统</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3><i class="fas fa-table"></i> 表9：水和燃料需求</h3>
+                <p style="margin-bottom: 20px; color: var(--text-light); font-style: italic;">
+                    (水和燃料需求)
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>项目</th>
+                            <th>数量</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>工厂原水</td>
+                            <td>124 m³/小时</td>
+                        </tr>
+                        <tr>
+                            <td>回收水</td>
+                            <td>69 m³/小时</td>
+                        </tr>
+                        <tr>
+                            <td>防尘水</td>
+                            <td>25 m³/小时</td>
+                        </tr>
+                        <tr>
+                            <td>原水储存池</td>
+                            <td>5,000 m³</td>
+                        </tr>
+                        <tr>
+                            <td>回收水池</td>
+                            <td>2,500 m³</td>
+                        </tr>
+                        <tr>
+                            <td>饮用水箱</td>
+                            <td>15 m³</td>
+                        </tr>
+                        <tr>
+                            <td>防尘水箱</td>
+                            <td>15,000 升</td>
+                        </tr>
+                        <tr>
+                            <td>雨水坝</td>
+                            <td>10,000 m³</td>
+                        </tr>
+                        <tr>
+                            <td>现场柴油储存</td>
+                            <td>30,000 升</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3><i class="fas fa-table"></i> 表10：政府收入与税收</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>收入项目</th>
+                            <th>率/金额</th>
+                            <th>总计（美元）</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>固定费用</td>
+                            <td>固定</td>
+                            <td>$88,496</td>
+                        </tr>
+                        <tr>
+                            <td>地表税</td>
+                            <td>每平方公里</td>
+                            <td>$150,442</td>
+                        </tr>
+                        <tr>
+                            <td>额外地表税</td>
+                            <td>× 8.5</td>
+                            <td>$696,018</td>
+                        </tr>
+                        <tr>
+                            <td>特许权使用费</td>
+                            <td>5%</td>
+                            <td>$62,884,728</td>
+                        </tr>
+                        <tr>
+                            <td>企业所得税</td>
+                            <td>27.5%</td>
+                            <td>$207,990,154</td>
+                        </tr>
+                        <tr>
+                            <td>CFE</td>
+                            <td>每立方米</td>
+                            <td>$3,022,389</td>
+                        </tr>
+                        <tr style="background: rgba(184, 134, 11, 0.1); font-weight: 700;">
+                            <td colspan="2"><strong>政府总收入</strong></td>
+                            <td><strong>$274,082,227</strong></td>
+                        </tr>
+                        <tr style="background: rgba(184, 134, 11, 0.05);">
+                            <td colspan="2"><strong>项目总收入</strong></td>
+                            <td><strong>$1,257,692,615</strong></td>
+                        </tr>
+                        <tr style="background: rgba(184, 134, 11, 0.05);">
+                            <td colspan="2"><strong>税后净现金流</strong></td>
+                            <td><strong>$328,067,374</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container" style="background: linear-gradient(135deg, rgba(184, 134, 11, 0.1) 0%, rgba(212, 175, 55, 0.05) 100%); border: 2px solid var(--primary-gold); padding: 30px;">
+                <h3 style="color: var(--primary-gold); text-align: center; margin-bottom: 20px;"><i class="fas fa-chart-line"></i> 关键指标总结</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>指标</th>
+                            <th>数值</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>矿石总量 (0.8 g/t cut-off)</td>
+                            <td>18,337,590 吨</td>
+                        </tr>
+                        <tr>
+                            <td>品位</td>
+                            <td>1.46 g/t</td>
+                        </tr>
+                        <tr>
+                            <td>可采黄金</td>
+                            <td>860,769 盎司</td>
+                        </tr>
+                        <tr>
+                            <td>回收率</td>
+                            <td>80%</td>
+                        </tr>
+                        <tr>
+                            <td>矿山寿命</td>
+                            <td>8.5 年</td>
+                        </tr>
+                        <tr>
+                            <td>年产量</td>
+                            <td>81,072 盎司/年</td>
+                        </tr>
+                        <tr>
+                            <td>资本成本</td>
+                            <td>$136.2 百万</td>
+                        </tr>
+                        <tr>
+                            <td>运营成本</td>
+                            <td>$515.2 百万（总计）</td>
+                        </tr>
+                        <tr>
+                            <td>剥采比</td>
+                            <td>12.45</td>
+                        </tr>
+                        <tr>
+                            <td>处理速率</td>
+                            <td>200 吨/小时</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Infrastructure Section -->
+    <section class="content-section section">
+        <div class="container">
+            <div class="section-title">
+                <h2>基础设施与运营</h2>
+            </div>
+
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3><i class="fas fa-road"></i> 基本基础设施</h3>
+                    <ul>
+                        <li>运营道路与运输系统</li>
+                        <li>完整供水与排水系统</li>
+                        <li>燃料供应与储存</li>
+                        <li>维护和修理工作间</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3><i class="fas fa-bolt"></i> 发电与通信系统</h3>
+                    <ul>
+                        <li>备用发电机</li>
+                        <li>内部通信网络</li>
+                        <li>安全与监控设施</li>
+                        <li>临时运营总部</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3><i class="fas fa-leaf"></i> 环境与可持续性</h3>
+                    <ul>
+                        <li>健康与安全措施</li>
+                        <li>关闭与复垦计划</li>
+                        <li>社区参与</li>
+                        <li>环境影响管理体系</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusions Section -->
+    <section class="content-section section" style="background: var(--light-bg);">
+        <div class="container">
+            <div class="section-title">
+                <h2>结论与建议</h2>
+                <p>项目开发的战略建议</p>
+            </div>
+
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3><i class="fas fa-lightbulb"></i> 主要建议</h3>
+                    <ul>
+                        <li>进一步钻探以确认资源</li>
+                        <li>提高地质模型精度</li>
+                        <li>开展高级冶金测试</li>
+                        <li>更新地质模型</li>
+                        <li>提高资源估算准确性</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3><i class="fas fa-chart-bar"></i> 财务方面</h3>
+                    <ul>
+                        <li>资本支出估算</li>
+                        <li>运营支出分析</li>
+                        <li>现金流建模</li>
+                        <li>潜在回报估算</li>
+                        <li>经济可行性分析</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3><i class="fas fa-forward"></i> 下一步</h3>
+                    <ul>
+                        <li>开发详细可行性研究</li>
+                        <li>采矏计划开发</li>
+                        <li>获取许可证</li>
+                        <li>准备融资</li>
+                        <li>进入实施阶段</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section" style="background: linear-gradient(135deg, var(--primary-gold) 0%, var(--secondary-gold) 100%); color: var(--white);">
+        <div class="container">
+            <div class="section-title" style="color: var(--white);">
+                <h2 style="color: var(--white);">联系我们</h2>
+                <p style="color: rgba(255,255,255,0.9);">了解更多投资机会信息</p>
+            </div>
+
+            <div style="text-align: center; font-size: 1.2rem;">
+                <div style="margin-bottom: 30px;">
+                    <img src="calx-logo-black2.png" alt="CALX Logo" style="height: 60px; filter: brightness(0) invert(1);">
+                </div>
+                <p style="margin-bottom: 20px;">
+                    <i class="fas fa-user" style="margin-right: 10px;"></i> 
+                    <strong>Dani Sinai</strong> - 投资顾问
+                </p>
+                <p style="margin-bottom: 20px;">
+                    <a href="https://wa.me/966599343529" target="_blank" style="color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+                        <i class="fab fa-whatsapp" style="font-size: 1.4rem;"></i>
+                        <span>+966 59 934 3529</span>
+                    </a>
+                </p>
+                <p style="margin-bottom: 20px;">
+                    <i class="fas fa-globe" style="margin-right: 10px;"></i> 
+                    <a href="https://calx.sa" target="_blank" style="color: white; text-decoration: none;">calx.sa</a>
+                </p>
+                <p>
+                    <i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> 
+                    沙特阿拉伯 · 利雅得
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>关于项目</h3>
+                    <p>投资者的西非黄金矿业项目之旅</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>快速链接</h3>
+                    <a href="#overview">项目概览</a>
+                    <a href="#data">地质数据</a>
+                    <a href="#resources">矿产资源</a>
+                </div>
+
+                <div class="footer-section">
+                    <h3>联系信息</h3>
+                    <p><i class="fas fa-user"></i> Dani Sinai - 投资顾问</p>
+                    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/966599343529" style="color: var(--white); text-decoration: none;">+966 59 934 3529</a></p>
+                    <p><i class="fas fa-globe"></i> <a href="https://calx.sa" target="_blank" style="color: var(--white); text-decoration: none;">calx.sa</a></p>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2025 黄金矿业项目 | 版权所有</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Investor Dashboard Modal -->
+    <div id="dashboardModal" class="dashboard-modal">
+        <div class="dashboard-content">
+            <button class="dashboard-close" onclick="closeDashboard()">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="dashboard-header">
+                <h1><i class="fas fa-chart-line"></i> 投资者仪表盘</h1>
+                <p>关键财务和运营指标全面概览</p>
+            </div>
+
+            <!-- Key Metrics -->
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <i class="fas fa-gem"></i>
+                    <div class="metric-value">860,769</div>
+                    <div class="metric-label">可采黄金盎司</div>
+                </div>
+                <div class="dashboard-card">
+                    <i class="fas fa-dollar-sign"></i>
+                    <div class="metric-value">$1,257.7M</div>
+                    <div class="metric-label">预计总收入</div>
+                </div>
+                <div class="dashboard-card">
+                    <i class="fas fa-chart-line"></i>
+                    <div class="metric-value">1.46</div>
+                    <div class="metric-label">平均品位 (g/t)</div>
+                </div>
+                <div class="dashboard-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <div class="metric-value">8.5</div>
+                    <div class="metric-label">项目周期（年）</div>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="chart-section">
+                <h2><i class="fas fa-chart-bar"></i> 财务与生产分析</h2>
+                
+                <div class="charts-grid">
+                    <!-- Cost Breakdown Chart -->
+                    <div class="chart-container">
+                        <h3>资本成本分布 (CAPEX)</h3>
+                        <div class="bar-chart">
+                            <div class="bar" style="height: 26%;">
+                                <span class="bar-value">$14.5M</span>
+                                <span class="bar-label">钻探与化验</span>
+                            </div>
+                            <div class="bar" style="height: 100%;">
+                                <span class="bar-value">$54.9M</span>
+                                <span class="bar-label">设备</span>
+                            </div>
+                            <div class="bar" style="height: 80%;">
+                                <span class="bar-value">$43.9M</span>
+                                <span class="bar-label">道路</span>
+                            </div>
+                            <div class="bar" style="height: 18%;">
+                                <span class="bar-value">$9.7M</span>
+                                <span class="bar-label">土地</span>
+                            </div>
+                            <div class="bar" style="height: 12%;">
+                                <span class="bar-value">$6.7M</span>
+                                <span class="bar-label">搬迁</span>
+                            </div>
+                            <div class="bar" style="height: 12%;">
+                                <span class="bar-value">$6.5M</span>
+                                <span class="bar-label">预备金</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Production Chart -->
+                    <div class="chart-container">
+                        <h3>生产与回收率</h3>
+                        <div class="bar-chart">
+                            <div class="bar" style="height: 100%; background: linear-gradient(to top, #28a745, #5cb85c);">
+                                <span class="bar-value">81,072</span>
+                                <span class="bar-label">年产量（盎司）</span>
+                            </div>
+                            <div class="bar" style="height: 80%; background: linear-gradient(to top, #B8860B, #D4AF37);">
+                                <span class="bar-value">80%</span>
+                                <span class="bar-label">回收率</span>
+                            </div>
+                        </div>
+                        <div class="legend">
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #28a745;"></div>
+                                <span>年产量: 81,072 盎司</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: var(--primary-gold);"></div>
+                                <span>回收率: 80%</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #6c757d;"></div>
+                                <span>处理量: 2,160,000 吨/年</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Revenue vs Costs -->
+                    <div class="chart-container">
+                        <h3>收入与成本对比（百万美元）</h3>
+                        <div class="bar-chart">
+                            <div class="bar" style="height: 100%; background: linear-gradient(to top, #28a745, #5cb85c);">
+                                <span class="bar-value">$1,257.7</span>
+                                <span class="bar-label">收入</span>
+                            </div>
+                            <div class="bar" style="height: 41%; background: linear-gradient(to top, #ffc107, #ffdb4d);">
+                                <span class="bar-value">$515.2</span>
+                                <span class="bar-label">OPEX</span>
+                            </div>
+                            <div class="bar" style="height: 22%; background: linear-gradient(to top, #dc3545, #ff6b6b);">
+                                <span class="bar-value">$274.1</span>
+                                <span class="bar-label">税收</span>
+                            </div>
+                            <div class="bar" style="height: 11%; background: linear-gradient(to top, #ff6b6b, #ff8c8c);">
+                                <span class="bar-value">$136.2</span>
+                                <span class="bar-label">CAPEX</span>
+                            </div>
+                            <div class="bar" style="height: 26%; background: linear-gradient(to top, var(--primary-gold), var(--secondary-gold));">
+                                <span class="bar-value">$328.1</span>
+                                <span class="bar-label">净收益</span>
+                            </div>
+                        </div>
+                        <div class="legend">
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #28a745;"></div>
+                                <span>总收入: $1,257.7M</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #ffc107;"></div>
+                                <span>运营成本: $515.2M</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #dc3545;"></div>
+                                <span>政府收入与税收: $274.1M</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #ff6b6b;"></div>
+                                <span>资本成本: $136.2M</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: var(--primary-gold);"></div>
+                                <span>净现金流: $328.1M</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Key Resources -->
+                    <div class="chart-container">
+                        <h3>关键资源</h3>
+                        <div style="padding: 20px;">
+                            <div class="legend">
+                                <div class="legend-item">
+                                    <div class="legend-color" style="background: var(--primary-gold);"></div>
+                                    <span><strong>18,337,590</strong> 吨总矿石量</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color" style="background: #28a745;"></div>
+                                    <span><strong>1.46</strong> g/t 平均品位</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color" style="background: #17a2b8;"></div>
+                                    <span><strong>80%</strong> 回收率</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color" style="background: #ffc107;"></div>
+                                    <span><strong>12.45</strong> 剥采比</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color" style="background: #6c757d;"></div>
+                                    <span><strong>200</strong> 吨/小时 处理速率</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Financial Summary -->
+            <div class="financial-summary">
+                <h2><i class="fas fa-wallet"></i> 财务摘要</h2>
+                <div class="financial-grid">
+                    <div class="financial-item">
+                        <i class="fas fa-hand-holding-usd" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                        <div class="amount">$136.2M</div>
+                        <div class="description">资本成本总计</div>
+                    </div>
+                    <div class="financial-item">
+                        <i class="fas fa-cogs" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                        <div class="amount">$515.2M</div>
+                        <div class="description">运营成本总计</div>
+                    </div>
+                    <div class="financial-item">
+                        <i class="fas fa-chart-line" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                        <div class="amount">$1,257.7M</div>
+                        <div class="description">预计总收入</div>
+                    </div>
+                    <div class="financial-item">
+                        <i class="fas fa-trophy" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                        <div class="amount">$328.1M</div>
+                        <div class="description">税后净现金流</div>
+                    </div>
+                    <div class="financial-item">
+                        <i class="fas fa-university" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                        <div class="amount">$274.1M</div>
+                        <div class="description">政府收入与税收</div>
+                    </div>
+                    <div class="financial-item">
+                        <i class="fas fa-dollar-sign" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                        <div class="amount">$1,500</div>
+                        <div class="description">黄金参考价/盎司</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Language switcher toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const langSwitcher = document.querySelector('.language-switcher');
+            const langBtn = document.querySelector('.lang-btn');
+            
+            if (langBtn) {
+                langBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    langSwitcher.classList.toggle('active');
+                });
+            }
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function() {
+                langSwitcher.classList.remove('active');
+            });
+        });
+
+        function openDashboard() {
+            document.getElementById('dashboardModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDashboard() {
+            document.getElementById('dashboardModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close on ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeDashboard();
+            }
+        });
+
+        // Close on outside click
+        document.getElementById('dashboardModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeDashboard();
+            }
+        });
+    </script>
+
+</body>
+</html>
