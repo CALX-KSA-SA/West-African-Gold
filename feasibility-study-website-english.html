@@ -1,0 +1,2246 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Pragma" content="no-cache">
+    <meta http-equiv="Expires" content="0">
+    <meta name="version" content="5.0-final-clean-20251207">
+    <meta name="theme-color" content="#B8860B">
+    <meta name="description" content="West African Gold Mining Investment - 860,769 oz recoverable gold, $328M net return">
+    <title>Gold Mining Project Feasibility Study | West Africa</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300;400;600;700;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        :root {
+            --primary-gold: #B8860B;
+            --secondary-gold: #D4AF37;
+            --dark-bg: #1A1A1A;
+            --light-bg: #F5F5F5;
+            --text-dark: #2C2C2C;
+            --text-light: #666666;
+            --white: #FFFFFF;
+            --border: #E0E0E0;
+            --success: #28A745;
+            --info: #17A2B8;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Source Sans Pro', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+            background: var(--light-bg);
+            color: var(--text-dark);
+            line-height: 1.8;
+            overflow-x: hidden;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+
+        .container {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--dark-bg) 0%, #2A2A2A 100%);
+            padding: 25px 0;
+            box-shadow: 0 4px 20px rgba(0,0,0,0.15);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .header-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .logo img {
+            height: 50px;
+            width: auto;
+        }
+
+        .logo span {
+            font-size: 1.1rem;
+            font-weight: 700;
+            color: var(--white);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 25px;
+        }
+
+        nav a {
+            color: var(--white);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.95rem;
+            transition: color 0.3s;
+            position: relative;
+        }
+
+        nav a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--secondary-gold);
+            transition: width 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--secondary-gold);
+        }
+
+        nav a:hover::after {
+            width: 100%;
+        }
+
+        .dashboard-btn {
+            background: linear-gradient(135deg, #0066B2, #1C69D4);
+            color: var(--white);
+            padding: 10px 20px;
+            border-radius: 25px;
+            font-weight: 700;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            cursor: pointer;
+            transition: all 0.3s;
+            border: none;
+            font-size: 0.95rem;
+            box-shadow: 0 4px 15px rgba(0, 102, 178, 0.3);
+        }
+
+        .dashboard-btn i {
+            background: linear-gradient(135deg, #FFD700, #FFA500, #FF69B4, #00CED1);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-size: 1.1rem;
+            animation: colorShift 3s ease-in-out infinite;
+        }
+
+        @keyframes colorShift {
+            0%, 100% { filter: hue-rotate(0deg); }
+            50% { filter: hue-rotate(30deg); }
+        }
+
+        .dashboard-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 102, 178, 0.5);
+            background: linear-gradient(135deg, #004C8C, #0066B2);
+        }
+
+        /* Language Switcher */
+        .language-switcher {
+            position: relative;
+            display: inline-block;
+        }
+
+        .lang-btn {
+            background: rgba(255, 255, 255, 0.1);
+            color: var(--white);
+            padding: 8px 15px;
+            border-radius: 20px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            cursor: pointer;
+            font-size: 0.9rem;
+            font-weight: 600;
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            transition: all 0.3s;
+        }
+
+        .lang-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+            border-color: var(--secondary-gold);
+        }
+
+        .lang-dropdown {
+            display: none;
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 5px;
+            background: var(--white);
+            border-radius: 12px;
+            box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+            min-width: 150px;
+            z-index: 1000;
+            padding: 5px 0;
+        }
+
+        .language-switcher.active .lang-dropdown {
+            display: block;
+        }
+
+        .lang-option {
+            padding: 12px 20px;
+            color: var(--text-dark);
+            text-decoration: none;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            transition: all 0.3s;
+            border-bottom: 1px solid var(--border);
+        }
+
+        .lang-option:last-child {
+            border-bottom: none;
+        }
+
+        .lang-option:hover {
+            background: var(--light-bg);
+            color: var(--primary-gold);
+        }
+
+        .lang-option.active {
+            background: linear-gradient(135deg, rgba(184, 134, 11, 0.1), rgba(212, 175, 55, 0.1));
+            color: var(--primary-gold);
+            font-weight: 700;
+        }
+
+        /* Dashboard Modal */
+        .dashboard-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.9);
+            z-index: 2000;
+            overflow-y: auto;
+        }
+
+        .dashboard-modal.active {
+            display: block;
+        }
+
+        .dashboard-content {
+            max-width: 1600px;
+            margin: 40px auto;
+            padding: 40px;
+            background: var(--white);
+            border-radius: 20px;
+            position: relative;
+        }
+
+        .dashboard-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: #dc3545;
+            color: var(--white);
+            border: none;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            cursor: pointer;
+            font-size: 1.2rem;
+            transition: all 0.3s;
+        }
+
+        .dashboard-close:hover {
+            background: #c82333;
+            transform: rotate(90deg);
+        }
+
+        .dashboard-header {
+            text-align: center;
+            margin-bottom: 40px;
+        }
+
+        .dashboard-header h1 {
+            font-size: 2.5rem;
+            color: var(--dark-bg);
+            margin-bottom: 10px;
+        }
+
+        .dashboard-header p {
+            color: var(--text-light);
+            font-size: 1.1rem;
+        }
+
+        .dashboard-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin-bottom: 40px;
+        }
+
+        .dashboard-card {
+            background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold));
+            padding: 30px;
+            border-radius: 15px;
+            color: var(--white);
+            text-align: center;
+            box-shadow: 0 8px 25px rgba(184, 134, 11, 0.3);
+        }
+
+        .dashboard-card i {
+            font-size: 3rem;
+            margin-bottom: 15px;
+            opacity: 0.9;
+        }
+
+        .metric-value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .metric-label {
+            font-size: 1rem;
+            opacity: 0.95;
+        }
+
+        .chart-section {
+            margin-top: 40px;
+        }
+
+        .chart-section h2 {
+            text-align: center;
+            font-size: 2rem;
+            color: var(--dark-bg);
+            margin-bottom: 30px;
+        }
+
+        .charts-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+            gap: 30px;
+            margin-bottom: 40px;
+        }
+
+        .chart-container {
+            background: var(--white);
+            border: 2px solid var(--border);
+            border-radius: 15px;
+            padding: 25px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .chart-container h3 {
+            font-size: 1.3rem;
+            color: var(--dark-bg);
+            margin-bottom: 20px;
+            text-align: center;
+        }
+
+        .bar-chart {
+            display: flex;
+            justify-content: space-around;
+            align-items: flex-end;
+            height: 300px;
+            gap: 10px;
+            padding: 20px 0;
+        }
+
+        .bar {
+            flex: 1;
+            background: linear-gradient(to top, var(--primary-gold), var(--secondary-gold));
+            border-radius: 8px 8px 0 0;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: center;
+            padding-top: 10px;
+            min-height: 60px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .bar-value {
+            font-weight: 700;
+            color: var(--white);
+            font-size: 0.9rem;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        .bar-label {
+            position: absolute;
+            bottom: -50px;
+            width: 100%;
+            text-align: center;
+            font-size: 0.75rem;
+            color: var(--text-dark);
+            font-weight: 600;
+        }
+
+        .legend {
+            margin-top: 60px;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 0.9rem;
+        }
+
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+        }
+
+        .financial-summary {
+            margin-top: 40px;
+            padding: 30px;
+            background: linear-gradient(135deg, rgba(184, 134, 11, 0.1), rgba(212, 175, 55, 0.05));
+            border-radius: 15px;
+            border: 2px solid var(--primary-gold);
+        }
+
+        .financial-summary h2 {
+            text-align: center;
+            color: var(--dark-bg);
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        .financial-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .financial-item {
+            background: var(--white);
+            padding: 25px;
+            border-radius: 12px;
+            text-align: center;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .financial-item i {
+            color: var(--primary-gold);
+        }
+
+        .financial-item .amount {
+            font-size: 2rem;
+            font-weight: 800;
+            color: var(--primary-gold);
+            margin: 10px 0;
+        }
+
+        .financial-item .description {
+            color: var(--text-light);
+            font-size: 0.95rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, rgba(184, 134, 11, 0.95), rgba(212, 175, 55, 0.9)),
+                        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 600"><rect fill="%231A1A1A" width="1200" height="600"/></svg>');
+            background-size: cover;
+            background-position: center;
+            padding: 150px 0 100px;
+            color: var(--white);
+            text-align: center;
+        }
+
+        .hero-content h1 {
+            font-size: 3.5rem;
+            font-weight: 800;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+        }
+
+        .hero-content p {
+            font-size: 1.3rem;
+            margin-bottom: 30px;
+            max-width: 900px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .cta-button {
+            display: inline-block;
+            background: var(--white);
+            color: var(--primary-gold);
+            padding: 15px 40px;
+            border-radius: 30px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.3s;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Sections */
+        .section {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 2.8rem;
+            color: var(--dark-bg);
+            margin-bottom: 15px;
+            font-weight: 800;
+        }
+
+        .section-title p {
+            font-size: 1.2rem;
+            color: var(--text-light);
+            max-width: 700px;
+            margin: 0 auto;
+        }
+
+        /* Stats Grid */
+        .stats-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-top: 50px;
+        }
+
+        .stat-card {
+            background: linear-gradient(135deg, var(--primary-gold), var(--secondary-gold));
+            padding: 40px 30px;
+            border-radius: 15px;
+            text-align: center;
+            color: var(--white);
+            box-shadow: 0 8px 25px rgba(184, 134, 11, 0.3);
+            transition: transform 0.3s;
+        }
+
+        .stat-card:hover {
+            transform: translateY(-10px);
+        }
+
+        .stat-card i {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            opacity: 0.9;
+        }
+
+        .stat-card .value {
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 10px;
+        }
+
+        .stat-card .label {
+            font-size: 1rem;
+            opacity: 0.95;
+        }
+
+        /* Content Grid */
+        .content-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .content-card {
+            background: var(--white);
+            padding: 35px;
+            border-radius: 15px;
+            box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+            border-left: 4px solid var(--primary-gold);
+        }
+
+        .content-card h3 {
+            font-size: 1.5rem;
+            color: var(--dark-bg);
+            margin-bottom: 20px;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .content-card h3 i {
+            color: var(--primary-gold);
+        }
+
+        .content-card ul {
+            list-style: none;
+            padding: 0;
+        }
+
+        .content-card li {
+            padding: 10px 0;
+            padding-left: 30px;
+            position: relative;
+            color: var(--text-light);
+        }
+
+        .content-card li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--primary-gold);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        /* Tables */
+        .table-section {
+            padding: 80px 0;
+            background: var(--light-bg);
+        }
+
+        .table-container {
+            background: var(--white);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+            overflow-x: auto;
+            margin-bottom: 40px;
+        }
+
+        .table-container h3 {
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--text-dark);
+            margin-bottom: 25px;
+            padding-bottom: 15px;
+            border-bottom: 3px solid var(--primary-gold);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th {
+            background: linear-gradient(135deg, var(--primary-gold) 0%, var(--secondary-gold) 100%);
+            color: var(--white);
+            padding: 18px;
+            text-align: left;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        td {
+            padding: 18px;
+            border-bottom: 1px solid var(--border);
+            text-align: left;
+            font-size: 1.05rem;
+        }
+
+        tr:hover {
+            background: rgba(184, 134, 11, 0.05);
+        }
+
+        tr:last-child td {
+            border-bottom: none;
+        }
+
+
+
+        /* Footer */
+        footer {
+            background: var(--dark-bg);
+            color: var(--white);
+            padding: 50px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-section h3 {
+            font-size: 1.3rem;
+            margin-bottom: 20px;
+            color: var(--secondary-gold);
+        }
+
+        .footer-section p {
+            color: rgba(255, 255, 255, 0.8);
+            line-height: 1.8;
+            margin-bottom: 10px;
+        }
+
+        .footer-section a {
+            display: block;
+            color: rgba(255, 255, 255, 0.8);
+            text-decoration: none;
+            margin-bottom: 10px;
+            transition: color 0.3s;
+        }
+
+        .footer-section a:hover {
+            color: var(--secondary-gold);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            color: rgba(255, 255, 255, 0.6);
+        }
+
+        /* Responsive */
+        @media (max-width: 1200px) {
+            .container {
+                max-width: 100%;
+                padding: 0 15px;
+            }
+            
+            .stats-grid,
+            .content-grid {
+                grid-template-columns: repeat(2, 1fr);
+                gap: 20px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .header-content {
+                flex-wrap: wrap;
+                gap: 15px;
+            }
+
+            .logo span {
+                font-size: 0.9rem;
+            }
+
+            nav ul {
+                flex-direction: row;
+                flex-wrap: wrap;
+                gap: 10px;
+                justify-content: center;
+            }
+
+            nav a {
+                font-size: 0.85rem;
+            }
+
+            .dashboard-btn {
+                width: 100%;
+                justify-content: center;
+            }
+
+            .hero-content h1 {
+                font-size: 2rem;
+                line-height: 1.2;
+            }
+            
+            .hero p {
+                font-size: 1rem;
+            }
+
+            .section-title h2 {
+                font-size: 1.8rem;
+            }
+
+            .section-title p {
+                font-size: 0.95rem;
+            }
+
+            .stats-grid,
+            .content-grid {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+
+            .stat-card {
+                padding: 20px;
+            }
+
+            .stat-card .value {
+                font-size: 2rem;
+            }
+
+            .charts-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .table-container {
+                overflow-x: auto;
+                -webkit-overflow-scrolling: touch;
+            }
+
+            table {
+                font-size: 0.85rem;
+                min-width: 600px;
+            }
+
+            th, td {
+                padding: 10px 8px;
+            }
+
+            .dashboard-modal {
+                width: 95%;
+                max-width: 95%;
+                height: 95vh;
+                padding: 15px;
+            }
+
+            .dashboard-header h2 {
+                font-size: 1.5rem;
+            }
+
+            .metric-card h3 {
+                font-size: 0.85rem;
+            }
+
+            .metric-value {
+                font-size: 1.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero-content h1 {
+                font-size: 1.6rem;
+            }
+
+            .hero p {
+                font-size: 0.9rem;
+            }
+
+            .section-title h2 {
+                font-size: 1.5rem;
+            }
+
+            .cta-button {
+                padding: 12px 30px;
+                font-size: 0.9rem;
+            }
+
+            .stat-card .value {
+                font-size: 1.6rem;
+            }
+
+            .stat-card .label {
+                font-size: 0.85rem;
+            }
+
+            table {
+                font-size: 0.75rem;
+            }
+
+            th, td {
+                padding: 8px 5px;
+            }
+        }
+
+        /* Performance optimizations */
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        * {
+            -webkit-tap-highlight-color: transparent;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Header -->
+    <header>
+        <div class="container">
+            <div class="header-content">
+                <div class="logo">
+                    <img src="calx-logo-black2.png" alt="CALX Logo" style="filter: brightness(0) invert(1);">
+                    <span>Investor's Journey to Gold</span>
+                </div>
+                <nav>
+                    <ul>
+                        <li><a href="#overview">Overview</a></li>
+                        <li><a href="#data">Data</a></li>
+                        <li><a href="#resources">Resources</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </nav>
+                <div class="language-switcher">
+                    <button class="lang-btn">
+                        <i class="fas fa-globe"></i>
+                        <span>English</span>
+                    </button>
+                    <div class="lang-dropdown">
+                        <a href="feasibility-study-website.html" class="lang-option">
+                            <span>🇸🇦</span>
+                            <span>العربية</span>
+                        </a>
+                        <a href="feasibility-study-website-english.html" class="lang-option active">
+                            <span>🇬🇧</span>
+                            <span>English</span>
+                        </a>
+                        <a href="feasibility-study-website-chinese.html" class="lang-option">
+                            <span>🇨🇳</span>
+                            <span>中文</span>
+                        </a>
+                    </div>
+                </div>
+                <button class="dashboard-btn" onclick="openDashboard()">
+                    <i class="fas fa-chart-pie"></i>
+                    <span>Investor Dashboard</span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <h1>Investor's Journey to West African Gold</h1>
+                <p>Exclusive Investment Opportunity: 860,000 oz of Gold with $328 Million Net Return over 8.5 Years</p>
+                <a href="#overview" class="cta-button">Explore the Project</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Overview Section -->
+    <section id="overview" class="section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Project Overview</h2>
+                <p>Comprehensive assessment based on solid scientific methodology to ensure the highest standards of accuracy and transparency</p>
+            </div>
+
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <i class="fas fa-gem"></i>
+                    <div class="value">860,769</div>
+                    <div class="label">Recoverable Gold (oz)</div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-chart-line"></i>
+                    <div class="value">1.46</div>
+                    <div class="label">Average Grade (g/t)</div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-industry"></i>
+                    <div class="value">18,337,590</div>
+                    <div class="label">Total Ore (tons)</div>
+                </div>
+                <div class="stat-card">
+                    <i class="fas fa-calendar-alt"></i>
+                    <div class="value">~8.5</div>
+                    <div class="label">Project Life (years)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Introduction Section -->
+    <section class="content-section section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Introduction & Study Context</h2>
+            </div>
+
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3><i class="fas fa-flag"></i> Project Objectives</h3>
+                    <ul>
+                        <li>Determine full mineral potential</li>
+                        <li>Optimize long-term planning</li>
+                        <li>Enhance investment decision accuracy</li>
+                        <li>Develop sustainable business model</li>
+                        <li>Ensure responsible environmental practices</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3><i class="fas fa-tasks"></i> Study Scope</h3>
+                    <ul>
+                        <li>Precise mineral resource assessment</li>
+                        <li>Geological structure analysis</li>
+                        <li>Operational criteria preparation</li>
+                        <li>Infrastructure requirements definition</li>
+                        <li>Comprehensive cost estimation</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3><i class="fas fa-microscope"></i> Methodology</h3>
+                    <ul>
+                        <li>Advanced geological measurement devices</li>
+                        <li>Geographic Information Systems (GIS)</li>
+                        <li>Precise sampling tools</li>
+                        <li>Strict quality control</li>
+                        <li>Comprehensive data documentation</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Geological Data Section -->
+    <section class="content-section section" style="background: var(--light-bg);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Geological Data</h2>
+                <p>Precise analysis of rock formations and mineral resources</p>
+            </div>
+
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3><i class="fas fa-mountain"></i> Main Formations</h3>
+                    <ul>
+                        <li>Interlocking rock formations</li>
+                        <li>Volcano-sedimentary units</li>
+                        <li>Metamorphic rock formations</li>
+                        <li>Diverse geological structures</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3><i class="fas fa-gem"></i> Mineralization Types</h3>
+                    <ul>
+                        <li>Pyrite</li>
+                        <li>Chalcopyrite</li>
+                        <li>Arsenopyrite</li>
+                        <li>Silica and associated elements</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3><i class="fas fa-search"></i> Previous Work</h3>
+                    <ul>
+                        <li>Comprehensive geochemical surveys</li>
+                        <li>Magnetic and radiometric surveys</li>
+                        <li>Multi-phase drilling campaigns</li>
+                        <li>Analysis per international standards</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Resources Table Section -->
+    <section id="resources" class="table-section">
+        <div class="container">
+            <div class="section-title">
+                <h2 id="data">Mineral Resource Estimation</h2>
+                <p>Precise resource estimates at different cut-off grades based on geological data</p>
+            </div>
+
+            <div class="table-container">
+                <h3><i class="fas fa-table"></i> Table 1: Gold Potential Regardless of Cut-off Grade</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Grade (g/t)</th>
+                            <th>Volume (m3)</th>
+                            <th>Weight (tons)</th>
+                            <th>Avg Grade (g/t)</th>
+                            <th>Production (oz)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0.0 → 0.25</td>
+                            <td>703,650</td>
+                            <td>1,899,855</td>
+                            <td>0.25</td>
+                            <td>15,270</td>
+                        </tr>
+                        <tr>
+                            <td>0.25 → 0.5</td>
+                            <td>20,435,500</td>
+                            <td>55,175,850</td>
+                            <td>0.34</td>
+                            <td>603,142</td>
+                        </tr>
+                        <tr>
+                            <td>0.5 → 1.0</td>
+                            <td>8,990,050</td>
+                            <td>24,273,135</td>
+                            <td>0.69</td>
+                            <td>538,476</td>
+                        </tr>
+                        <tr>
+                            <td>1.0 → 1.5</td>
+                            <td>2,286,000</td>
+                            <td>6,172,200</td>
+                            <td>1.2</td>
+                            <td>238,129</td>
+                        </tr>
+                        <tr>
+                            <td>1.5 → 2.0</td>
+                            <td>1,168,550</td>
+                            <td>3,155,085</td>
+                            <td>1.73</td>
+                            <td>175,488</td>
+                        </tr>
+                        <tr>
+                            <td>2.0 → 999.0</td>
+                            <td>1,076,500</td>
+                            <td>2,906,550</td>
+                            <td>2.9</td>
+                            <td>270,999</td>
+                        </tr>
+                        <tr style="background: rgba(184, 134, 11, 0.15); font-weight: 700; font-size: 1.15rem;">
+                            <td><strong>Grand Total</strong></td>
+                            <td><strong>34,660,250</strong></td>
+                            <td><strong>93,582,675</strong></td>
+                            <td><strong>0.61</strong></td>
+                            <td><strong>1,835,341</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3><i class="fas fa-table"></i> Table 2: Resources at 0.5 g/t Cut-off Grade</h3>
+                <p style="margin-bottom: 20px; color: var(--text-light); font-style: italic;">
+                    (Resources at 0.5 g/t Cut-off Grade)
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Grade (g/t)</th>
+                            <th>Volume (m3)</th>
+                            <th>Weight (tons)</th>
+                            <th>Avg Grade (g/t)</th>
+                            <th>Production (oz)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0.25 → 0.5</td>
+                            <td>245,150</td>
+                            <td>661,905</td>
+                            <td>0.5</td>
+                            <td>10,640</td>
+                        </tr>
+                        <tr>
+                            <td>0.5 → 1.0</td>
+                            <td>8,990,050</td>
+                            <td>24,273,135</td>
+                            <td>0.69</td>
+                            <td>538,476</td>
+                        </tr>
+                        <tr>
+                            <td>1.0 → 1.5</td>
+                            <td>2,286,000</td>
+                            <td>6,172,200</td>
+                            <td>1.2</td>
+                            <td>238,129</td>
+                        </tr>
+                        <tr>
+                            <td>1.5 → 2.0</td>
+                            <td>1,168,550</td>
+                            <td>3,155,085</td>
+                            <td>1.73</td>
+                            <td>175,488</td>
+                        </tr>
+                        <tr>
+                            <td>2.0 → 999</td>
+                            <td>1,076,500</td>
+                            <td>2,906,550</td>
+                            <td>2.9</td>
+                            <td>270,999</td>
+                        </tr>
+                        <tr style="background: rgba(184, 134, 11, 0.1); font-weight: 700;">
+                            <td><strong>Total</strong></td>
+                            <td><strong>13,766,250</strong></td>
+                            <td><strong>37,168,875</strong></td>
+                            <td><strong>1.03</strong></td>
+                            <td><strong>1,230,858</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3><i class="fas fa-table"></i> Table 3: Resources at 0.8 g/t Cut-off Grade (Operating Scenario)</h3>
+                <p style="margin-bottom: 20px; color: var(--text-light); font-style: italic;">
+                    (Primary Operating Scenario)
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Grade (g/t)</th>
+                            <th>Volume (m3)</th>
+                            <th>Weight (tons)</th>
+                            <th>Avg Grade (g/t)</th>
+                            <th>Production (oz)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0.5 → 1.0</td>
+                            <td>2,260,650</td>
+                            <td>6,103,755</td>
+                            <td>0.89</td>
+                            <td>174,654</td>
+                        </tr>
+                        <tr>
+                            <td>1.0 → 1.5</td>
+                            <td>2,286,000</td>
+                            <td>6,172,200</td>
+                            <td>1.2</td>
+                            <td>238,129</td>
+                        </tr>
+                        <tr>
+                            <td>1.5 → 2.0</td>
+                            <td>1,168,550</td>
+                            <td>3,155,085</td>
+                            <td>1.73</td>
+                            <td>175,488</td>
+                        </tr>
+                        <tr>
+                            <td>2.0 → 999</td>
+                            <td>1,076,500</td>
+                            <td>2,906,550</td>
+                            <td>2.9</td>
+                            <td>270,999</td>
+                        </tr>
+                        <tr style="background: rgba(184, 134, 11, 0.1); font-weight: 700;">
+                            <td><strong>Total</strong></td>
+                            <td><strong>6,791,700</strong></td>
+                            <td><strong>18,337,590</strong></td>
+                            <td><strong>1.46</strong></td>
+                            <td><strong>860,769</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3><i class="fas fa-table"></i> Table 4: Resources at 1.0 g/t Cut-off Grade</h3>
+                <p style="margin-bottom: 20px; color: var(--text-light); font-style: italic;">
+                    (Resources at 1.0 g/t Cut-off Grade)
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Grade (g/t)</th>
+                            <th>Volume (m3)</th>
+                            <th>Weight (tons)</th>
+                            <th>Avg Grade (g/t)</th>
+                            <th>Production (oz)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>0.5 → 1.0</td>
+                            <td>27,550</td>
+                            <td>74,385</td>
+                            <td>1.0</td>
+                            <td>2,392</td>
+                        </tr>
+                        <tr>
+                            <td>1.0 → 1.5</td>
+                            <td>2,286,000</td>
+                            <td>6,172,200</td>
+                            <td>1.2</td>
+                            <td>238,129</td>
+                        </tr>
+                        <tr>
+                            <td>1.5 → 2.0</td>
+                            <td>1,168,550</td>
+                            <td>3,155,085</td>
+                            <td>1.73</td>
+                            <td>175,488</td>
+                        </tr>
+                        <tr>
+                            <td>2.0 → 999</td>
+                            <td>1,076,500</td>
+                            <td>2,906,550</td>
+                            <td>2.9</td>
+                            <td>270,999</td>
+                        </tr>
+                        <tr style="background: rgba(184, 134, 11, 0.1); font-weight: 700;">
+                            <td><strong>Total</strong></td>
+                            <td><strong>4,558,600</strong></td>
+                            <td><strong>12,308,220</strong></td>
+                            <td><strong>1.73</strong></td>
+                            <td><strong>684,594</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3><i class="fas fa-table"></i> Table 5: Annual Production Simulation (Monthly Breakdown)</h3>
+                <p style="margin-bottom: 20px; color: var(--text-light); font-style: italic;">
+                    (Annual Production Simulation - Monthly Breakdown)
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Month</th>
+                            <th>Tons</th>
+                            <th>Grade (g/t)</th>
+                            <th>Recovery (%)</th>
+                            <th>Gold (grams)</th>
+                            <th>Gold (oz)</th>
+                            <th>Price ($/oz)</th>
+                            <th>Value (USD)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>January</td>
+                            <td>180,000</td>
+                            <td>1.46</td>
+                            <td>80%</td>
+                            <td>210,240</td>
+                            <td>6,756</td>
+                            <td>1,500</td>
+                            <td>$10,134,002</td>
+                        </tr>
+                        <tr>
+                            <td>February</td>
+                            <td>180,000</td>
+                            <td>1.46</td>
+                            <td>80%</td>
+                            <td>210,240</td>
+                            <td>6,756</td>
+                            <td>1,500</td>
+                            <td>$10,134,002</td>
+                        </tr>
+                        <tr>
+                            <td>March</td>
+                            <td>180,000</td>
+                            <td>1.46</td>
+                            <td>80%</td>
+                            <td>210,240</td>
+                            <td>6,756</td>
+                            <td>1,500</td>
+                            <td>$10,134,002</td>
+                        </tr>
+                        <tr>
+                            <td>April</td>
+                            <td>180,000</td>
+                            <td>1.46</td>
+                            <td>80%</td>
+                            <td>210,240</td>
+                            <td>6,756</td>
+                            <td>1,500</td>
+                            <td>$10,134,002</td>
+                        </tr>
+                        <tr>
+                            <td>May</td>
+                            <td>180,000</td>
+                            <td>1.46</td>
+                            <td>80%</td>
+                            <td>210,240</td>
+                            <td>6,756</td>
+                            <td>1,500</td>
+                            <td>$10,134,002</td>
+                        </tr>
+                        <tr>
+                            <td>June</td>
+                            <td>180,000</td>
+                            <td>1.46</td>
+                            <td>80%</td>
+                            <td>210,240</td>
+                            <td>6,756</td>
+                            <td>1,500</td>
+                            <td>$10,134,002</td>
+                        </tr>
+                        <tr>
+                            <td>July</td>
+                            <td>180,000</td>
+                            <td>1.46</td>
+                            <td>80%</td>
+                            <td>210,240</td>
+                            <td>6,756</td>
+                            <td>1,500</td>
+                            <td>$10,134,002</td>
+                        </tr>
+                        <tr>
+                            <td>August</td>
+                            <td>180,000</td>
+                            <td>1.46</td>
+                            <td>80%</td>
+                            <td>210,240</td>
+                            <td>6,756</td>
+                            <td>1,500</td>
+                            <td>$10,134,002</td>
+                        </tr>
+                        <tr>
+                            <td>September</td>
+                            <td>180,000</td>
+                            <td>1.46</td>
+                            <td>80%</td>
+                            <td>210,240</td>
+                            <td>6,756</td>
+                            <td>1,500</td>
+                            <td>$10,134,002</td>
+                        </tr>
+                        <tr>
+                            <td>October</td>
+                            <td>180,000</td>
+                            <td>1.46</td>
+                            <td>80%</td>
+                            <td>210,240</td>
+                            <td>6,756</td>
+                            <td>1,500</td>
+                            <td>$10,134,002</td>
+                        </tr>
+                        <tr>
+                            <td>November</td>
+                            <td>180,000</td>
+                            <td>1.46</td>
+                            <td>80%</td>
+                            <td>210,240</td>
+                            <td>6,756</td>
+                            <td>1,500</td>
+                            <td>$10,134,002</td>
+                        </tr>
+                        <tr>
+                            <td>December</td>
+                            <td>180,000</td>
+                            <td>1.46</td>
+                            <td>80%</td>
+                            <td>210,240</td>
+                            <td>6,756</td>
+                            <td>1,500</td>
+                            <td>$10,134,002</td>
+                        </tr>
+                        <tr style="background: rgba(184, 134, 11, 0.1); font-weight: 700;">
+                            <td><strong>Total</strong></td>
+                            <td><strong>2,160,000</strong></td>
+                            <td><strong>—</strong></td>
+                            <td><strong>—</strong></td>
+                            <td><strong>2,522,880</strong></td>
+                            <td><strong>81,072</strong></td>
+                            <td><strong>—</strong></td>
+                            <td><strong>$121,608,021</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3><i class="fas fa-table"></i> Table 6: Capital Costs (CAPEX)</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Cost (USD)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Population Resettlement</td>
+                            <td>$6,726,000</td>
+                        </tr>
+                        <tr>
+                            <td>Drilling & Chemical Analysis</td>
+                            <td>$14,514,000</td>
+                        </tr>
+                        <tr>
+                            <td>Equipment Purchase & Leasing</td>
+                            <td>$54,870,000</td>
+                        </tr>
+                        <tr>
+                            <td>Road Construction & Maintenance</td>
+                            <td>$43,896,000</td>
+                        </tr>
+                        <tr>
+                            <td>Land Support</td>
+                            <td>$9,735,000</td>
+                        </tr>
+                        <tr>
+                            <td>Subtotal</td>
+                            <td>$129,741,000</td>
+                        </tr>
+                        <tr>
+                            <td>Contingency (5%)</td>
+                            <td>$6,487,050</td>
+                        </tr>
+                        <tr style="background: rgba(184, 134, 11, 0.1); font-weight: 700;">
+                            <td><strong>Grand Total</strong></td>
+                            <td><strong>$136,228,050</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3><i class="fas fa-table"></i> Table 7: Operating Costs (OPEX) - Per Ton Breakdown</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Cost Category</th>
+                            <th>USD per Ton</th>
+                            <th>Total (USD)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Ore Extraction</td>
+                            <td>$2.50</td>
+                            <td>$45,843,975</td>
+                        </tr>
+                        <tr>
+                            <td>Processing Costs</td>
+                            <td>$17.41</td>
+                            <td>$319,257,442</td>
+                        </tr>
+                        <tr>
+                            <td>Environmental Rehabilitation</td>
+                            <td>$0.30</td>
+                            <td>$5,501,277</td>
+                        </tr>
+                        <tr>
+                            <td>Smelting & Product Sales</td>
+                            <td>$4.76 (per oz)</td>
+                            <td>$4,097,260</td>
+                        </tr>
+                        <tr>
+                            <td>Ore Stock Loading</td>
+                            <td>$0.38</td>
+                            <td>$6,968,284</td>
+                        </tr>
+                        <tr>
+                            <td>Management & Admin Fees</td>
+                            <td>$5.28</td>
+                            <td>$96,822,475</td>
+                        </tr>
+                        <tr>
+                            <td>Transportation (Subcontracted)</td>
+                            <td>$0.20 per ton/km</td>
+                            <td>$36,675,180</td>
+                        </tr>
+                        <tr style="background: rgba(184, 134, 11, 0.1); font-weight: 700;">
+                            <td><strong>Total</strong></td>
+                            <td><strong>—</strong></td>
+                            <td><strong>$515,165,894</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3><i class="fas fa-table"></i"> Table 8: Required Equipment Specifications</h3>
+                <p style="margin-bottom: 20px; color: var(--text-light); font-style: italic;">
+                    (Equipment Specifications - To be Purchased/Leased)
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Category</th>
+                            <th>Equipment Type</th>
+                            <th>Specifications</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr style="background: rgba(184, 134, 11, 0.05); font-weight: 600;">
+                            <td colspan="3"><strong>Mining Operations</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Drilling</td>
+                            <td>Drill Rig</td>
+                            <td>Atlas Copco L7 / L8</td>
+                        </tr>
+                        <tr>
+                            <td>Extraction</td>
+                            <td>Hydraulic Excavator</td>
+                            <td>CAT RH90</td>
+                        </tr>
+                        <tr>
+                            <td>Transport</td>
+                            <td>Mining Trucks</td>
+                            <td>100-ton capacity</td>
+                        </tr>
+                        <tr>
+                            <td>Dewatering</td>
+                            <td>Dewatering Pump</td>
+                            <td>Flygt 150 HP, 100 m3/hour capacity</td>
+                        </tr>
+                        <tr>
+                            <td>Blasting</td>
+                            <td>Blasting Equipment</td>
+                            <td>ANFO (Ammonium Nitrate Fuel Oil)</td>
+                        </tr>
+                        <tr style="background: rgba(184, 134, 11, 0.05); font-weight: 600;">
+                            <td colspan="3"><strong>Ore Processing Plant</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Primary Crushing</td>
+                            <td>SAG Mill</td>
+                            <td>8.5m diameter x 4.35m, 6 MW motor</td>
+                        </tr>
+                        <tr>
+                            <td>Secondary Crushing</td>
+                            <td>Ball Mill</td>
+                            <td>6.10m x 9.05m, 75% critical speed</td>
+                        </tr>
+                        <tr>
+                            <td>Crushing</td>
+                            <td>Cone Crusher</td>
+                            <td>As per technical specifications</td>
+                        </tr>
+                        <tr>
+                            <td>Separation</td>
+                            <td>Hydro-cyclones</td>
+                            <td>10 Krebs units 380mm diameter</td>
+                        </tr>
+                        <tr>
+                            <td>Screening</td>
+                            <td>Screens</td>
+                            <td>As per technical specifications</td>
+                        </tr>
+                        <tr>
+                            <td>Internal Transport</td>
+                            <td>Conveyors</td>
+                            <td>As per technical specifications</td>
+                        </tr>
+                        <tr>
+                            <td>Processing</td>
+                            <td>Processing Technology</td>
+                            <td>Carbon-in-Leach (CIL)</td>
+                        </tr>
+                        <tr style="background: rgba(184, 134, 11, 0.05); font-weight: 600;">
+                            <td colspan="3"><strong>Infrastructure</strong></td>
+                        </tr>
+                        <tr>
+                            <td>Power</td>
+                            <td>Diesel Generators</td>
+                            <td>As per power requirements</td>
+                        </tr>
+                        <tr>
+                            <td>Storage</td>
+                            <td>Diesel Tanks</td>
+                            <td>30,000 liter on-site capacity</td>
+                        </tr>
+                        <tr>
+                            <td>Safety</td>
+                            <td>Explosives Storage</td>
+                            <td>According to safety standards</td>
+                        </tr>
+                        <tr>
+                            <td>Maintenance</td>
+                            <td>Maintenance Workshop</td>
+                            <td>Maintenance equipment and tools</td>
+                        </tr>
+                        <tr>
+                            <td>Communications</td>
+                            <td>Communication Equipment</td>
+                            <td>Radio, wireless and internet system</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3><i class="fas fa-table"></i> Table 9: Water & Fuel Requirements</h3>
+                <p style="margin-bottom: 20px; color: var(--text-light); font-style: italic;">
+                    (Water & Fuel Requirements)
+                </p>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Quantity</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Raw water for plant</td>
+                            <td>124 m3/hour</td>
+                        </tr>
+                        <tr>
+                            <td>Recycled water</td>
+                            <td>69 m3/hour</td>
+                        </tr>
+                        <tr>
+                            <td>Dust suppression water</td>
+                            <td>25 m3/hour</td>
+                        </tr>
+                        <tr>
+                            <td>Raw water storage pond</td>
+                            <td>5,000 m3</td>
+                        </tr>
+                        <tr>
+                            <td>Recycled water pond</td>
+                            <td>2,500 m3</td>
+                        </tr>
+                        <tr>
+                            <td>Potable water tank</td>
+                            <td>15 m3</td>
+                        </tr>
+                        <tr>
+                            <td>Dust suppression tank</td>
+                            <td>15,000 liters</td>
+                        </tr>
+                        <tr>
+                            <td>Rainwater dam</td>
+                            <td>10,000 m3</td>
+                        </tr>
+                        <tr>
+                            <td>On-site diesel storage</td>
+                            <td>30,000 liters</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container">
+                <h3><i class="fas fa-table"></i> Table 10: State Revenue & Taxes</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Revenue Item</th>
+                            <th>Rate/Amount</th>
+                            <th>Total (USD)</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Fixed Fees</td>
+                            <td>Fixed</td>
+                            <td>$88,496</td>
+                        </tr>
+                        <tr>
+                            <td>Surface Taxes</td>
+                            <td>Per sq km</td>
+                            <td>$150,442</td>
+                        </tr>
+                        <tr>
+                            <td>Additional Surface Tax</td>
+                            <td>x 8.5</td>
+                            <td>$696,018</td>
+                        </tr>
+                        <tr>
+                            <td>Royalties</td>
+                            <td>5%</td>
+                            <td>$62,884,728</td>
+                        </tr>
+                        <tr>
+                            <td>Corporate Tax</td>
+                            <td>27.5%</td>
+                            <td>$207,990,154</td>
+                        </tr>
+                        <tr>
+                            <td>CFE</td>
+                            <td>Per m3</td>
+                            <td>$3,022,389</td>
+                        </tr>
+                        <tr style="background: rgba(184, 134, 11, 0.1); font-weight: 700;">
+                            <td colspan="2"><strong>Total State Revenue</strong></td>
+                            <td><strong>$274,082,227</strong></td>
+                        </tr>
+                        <tr style="background: rgba(184, 134, 11, 0.05);">
+                            <td colspan="2"><strong>Total Project Revenue</strong></td>
+                            <td><strong>$1,257,692,615</strong></td>
+                        </tr>
+                        <tr style="background: rgba(184, 134, 11, 0.05);">
+                            <td colspan="2"><strong>Net Cash Flow (After Tax)</strong></td>
+                            <td><strong>$328,067,374</strong></td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <div class="table-container" style="background: linear-gradient(135deg, rgba(184, 134, 11, 0.1) 0%, rgba(212, 175, 55, 0.05) 100%); border: 2px solid var(--primary-gold); padding: 30px;">
+                <h3 style="color: var(--primary-gold); text-align: center; margin-bottom: 20px;"><i class="fas fa-chart-line"></i> Key Metrics Summary</h3>
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Metric</th>
+                            <th>Value</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Total Ore (0.8 g/t cut-off)</td>
+                            <td>18,337,590 tons</td>
+                        </tr>
+                        <tr>
+                            <td>Grade</td>
+                            <td>1.46 g/t</td>
+                        </tr>
+                        <tr>
+                            <td>Recoverable Gold</td>
+                            <td>860,769 oz</td>
+                        </tr>
+                        <tr>
+                            <td>Recovery Rate</td>
+                            <td>80%</td>
+                        </tr>
+                        <tr>
+                            <td>Mine Life</td>
+                            <td>8.5 years</td>
+                        </tr>
+                        <tr>
+                            <td>Annual Production</td>
+                            <td>81,072 oz/year</td>
+                        </tr>
+                        <tr>
+                            <td>Capital Costs</td>
+                            <td>$136.2 million</td>
+                        </tr>
+                        <tr>
+                            <td>Operating Costs</td>
+                            <td>$515.2 million (total)</td>
+                        </tr>
+                        <tr>
+                            <td>Stripping Ratio</td>
+                            <td>12.45</td>
+                        </tr>
+                        <tr>
+                            <td>Processing Rate</td>
+                            <td>200 tons/hour</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </section>
+
+    <!-- Infrastructure Section -->
+    <section class="content-section section">
+        <div class="container">
+            <div class="section-title">
+                <h2>Infrastructure & Requirements</h2>
+            </div>
+
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3><i class="fas fa-road"></i> Basic Infrastructure</h3>
+                    <ul>
+                        <li>Internal operational roads</li>
+                        <li>Water management system</li>
+                        <li>Fuel storage system</li>
+                        <li>Maintenance & operations workshops</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3><i class="fas fa-bolt"></i> Power & Communications</h3>
+                    <ul>
+                        <li>Backup power generators</li>
+                        <li>Internal communications network</li>
+                        <li>Security and surveillance systems</li>
+                        <li>Temporary operational headquarters</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3><i class="fas fa-leaf"></i> Environmental Aspects</h3>
+                    <ul>
+                        <li>Health and safety procedures</li>
+                        <li>Closure and rehabilitation principles</li>
+                        <li>Stakeholder engagement</li>
+                        <li>Sustainable practices</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Conclusions Section -->
+    <section class="content-section section" style="background: var(--light-bg);">
+        <div class="container">
+            <div class="section-title">
+                <h2>Conclusions & Recommendations</h2>
+                <p>Strategic recommendations for project development</p>
+            </div>
+
+            <div class="content-grid">
+                <div class="content-card">
+                    <h3><i class="fas fa-lightbulb"></i> Key Recommendations</h3>
+                    <ul>
+                        <li>Implement expanded drilling programs</li>
+                        <li>Enhance data verification level</li>
+                        <li>Conduct advanced metallurgical testing</li>
+                        <li>Update geological models</li>
+                        <li>Improve resource estimation accuracy</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3><i class="fas fa-chart-bar"></i> Financial Aspects</h3>
+                    <ul>
+                        <li>Capital expenditure estimation</li>
+                        <li>Operating expenditure analysis</li>
+                        <li>Cash flow modeling</li>
+                        <li>Potential returns estimation</li>
+                        <li>Economic feasibility analysis</li>
+                    </ul>
+                </div>
+
+                <div class="content-card">
+                    <h3><i class="fas fa-forward"></i> Next Steps</h3>
+                    <ul>
+                        <li>Detailed feasibility study</li>
+                        <li>Mining plan development</li>
+                        <li>Obtaining licenses</li>
+                        <li>Securing financing</li>
+                        <li>Begin implementation phase</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="section" style="background: linear-gradient(135deg, var(--primary-gold) 0%, var(--secondary-gold) 100%); color: var(--white);">
+        <div class="container">
+            <div class="section-title" style="color: var(--white);">
+                <h2 style="color: var(--white);">Contact Us</h2>
+                <p style="color: rgba(255,255,255,0.9);">For more information about this investment opportunity</p>
+            </div>
+
+            <div style="text-align: center; font-size: 1.2rem;">
+                <div style="margin-bottom: 30px;">
+                    <img src="calx-logo-black2.png" alt="CALX Logo" style="height: 60px; filter: brightness(0) invert(1);">
+                </div>
+                <p style="margin-bottom: 20px;">
+                    <i class="fas fa-user" style="margin-right: 10px;"></i> 
+                    <strong>Dani Sinai</strong> - Investment Consultant
+                </p>
+                <p style="margin-bottom: 20px;">
+                    <a href="https://wa.me/966599343529" target="_blank" style="color: white; text-decoration: none; display: inline-flex; align-items: center; gap: 8px;">
+                        <i class="fab fa-whatsapp" style="font-size: 1.4rem;"></i>
+                        <span>+966 59 934 3529</span>
+                    </a>
+                    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAA4AAAAOCAYAAAAfSC3RAAAABHNCSVQICAgIfAhkiAAAAAlwSFlzAAAAdgAAAHYBTnsmCAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAFYSURBVCiRpZM9SwNBEIafgwQSCxsrwcJCG1sLwcLW1tZCsLGwsLCwsLGwsLGwsLGwsLGwsLCwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwsLGwwOjMgABwA==" alt="WeChat QR" style="width: 16px; height: 16px; margin-left: 10px; vertical-align: middle;" title="WeChat: Dani Sinai"/>
+                </p>
+                <p style="margin-bottom: 20px;">
+                    <i class="fas fa-globe" style="margin-right: 10px;"></i> 
+                    <a href="https://calx.sa" target="_blank" style="color: white; text-decoration: none;">calx.sa</a>
+                </p>
+                <p>
+                    <i class="fas fa-map-marker-alt" style="margin-right: 10px;"></i> 
+                    Kingdom of Saudi Arabia - Riyadh
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About the Project</h3>
+                    <p>Investor's Journey to Gold Mining Project in West Africa</p>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <a href="#overview">Overview</a>
+                    <a href="#data">Geological Data</a>
+                    <a href="#resources">Mineral Resources</a>
+                </div>
+
+                <div class="footer-section">
+                    <h3>Contact Information</h3>
+                    <p><i class="fas fa-user"></i> Dani Sinai - Investment Consultant</p>
+                    <p><i class="fab fa-whatsapp"></i> <a href="https://wa.me/966599343529" style="color: var(--white); text-decoration: none;">+966 59 934 3529</a></p>
+                    <p><i class="fab fa-weixin"></i> WeChat: Dani Sinai (Scan QR above)</p>
+                    <p><i class="fas fa-globe"></i> <a href="https://calx.sa" target="_blank" style="color: var(--white); text-decoration: none;">calx.sa</a></p>
+                </div>
+            </div>
+
+            <div class="copyright">
+                <p>&copy; 2025 Gold Mining Project | All Rights Reserved</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Investor Dashboard Modal -->
+    <div id="dashboardModal" class="dashboard-modal">
+        <div class="dashboard-content">
+            <button class="dashboard-close" onclick="closeDashboard()">
+                <i class="fas fa-times"></i>
+            </button>
+            
+            <div class="dashboard-header">
+                <h1><i class="fas fa-chart-line"></i> Investor Dashboard</h1>
+                <p>Comprehensive overview of key financial and operational metrics</p>
+            </div>
+
+            <!-- Key Metrics -->
+            <div class="dashboard-grid">
+                <div class="dashboard-card">
+                    <i class="fas fa-gem"></i>
+                    <div class="metric-value">860,769</div>
+                    <div class="metric-label">Recoverable Gold Ounces</div>
+                </div>
+                <div class="dashboard-card">
+                    <i class="fas fa-dollar-sign"></i>
+                    <div class="metric-value">$1,257.7M</div>
+                    <div class="metric-label">Total Expected Revenue</div>
+                </div>
+                <div class="dashboard-card">
+                    <i class="fas fa-chart-line"></i>
+                    <div class="metric-value">1.46</div>
+                    <div class="metric-label">Average Grade (g/t)</div>
+                </div>
+                <div class="dashboard-card">
+                    <i class="fas fa-calendar-check"></i>
+                    <div class="metric-value">8.5</div>
+                    <div class="metric-label">Years Project Life</div>
+                </div>
+            </div>
+
+            <!-- Charts Section -->
+            <div class="chart-section">
+                <h2><i class="fas fa-chart-bar"></i> Financial & Production Analysis</h2>
+                
+                <div class="charts-grid">
+                    <!-- Cost Breakdown Chart -->
+                    <div class="chart-container">
+                        <h3>Capital Cost Distribution (CAPEX)</h3>
+                        <div class="bar-chart">
+                            <div class="bar" style="height: 26%;">
+                                <span class="bar-value">$14.5M</span>
+                                <span class="bar-label">Drilling & Analysis</span>
+                            </div>
+                            <div class="bar" style="height: 100%;">
+                                <span class="bar-value">$54.9M</span>
+                                <span class="bar-label">Equipment</span>
+                            </div>
+                            <div class="bar" style="height: 80%;">
+                                <span class="bar-value">$43.9M</span>
+                                <span class="bar-label">Roads</span>
+                            </div>
+                            <div class="bar" style="height: 18%;">
+                                <span class="bar-value">$9.7M</span>
+                                <span class="bar-label">Land</span>
+                            </div>
+                            <div class="bar" style="height: 12%;">
+                                <span class="bar-value">$6.7M</span>
+                                <span class="bar-label">Resettlement</span>
+                            </div>
+                            <div class="bar" style="height: 12%;">
+                                <span class="bar-value">$6.5M</span>
+                                <span class="bar-label">Contingency</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Production Chart -->
+                    <div class="chart-container">
+                        <h3>Production & Recovery Rates</h3>
+                        <div class="bar-chart">
+                            <div class="bar" style="height: 100%; background: linear-gradient(to top, #28a745, #5cb85c);">
+                                <span class="bar-value">81,072</span>
+                                <span class="bar-label">Annual Production (oz)</span>
+                            </div>
+                            <div class="bar" style="height: 80%; background: linear-gradient(to top, #B8860B, #D4AF37);">
+                                <span class="bar-value">80%</span>
+                                <span class="bar-label">Recovery Rate</span>
+                            </div>
+                        </div>
+                        <div class="legend">
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #28a745;"></div>
+                                <span>Annual Production: 81,072 oz</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: var(--primary-gold);"></div>
+                                <span>Recovery Rate: 80%</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #6c757d;"></div>
+                                <span>Processing: 2,160,000 tons/year</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Revenue vs Costs -->
+                    <div class="chart-container">
+                        <h3>Revenue vs Costs (Million USD)</h3>
+                        <div class="bar-chart">
+                            <div class="bar" style="height: 100%; background: linear-gradient(to top, #28a745, #5cb85c);">
+                                <span class="bar-value">$1,257.7</span>
+                                <span class="bar-label">Revenue</span>
+                            </div>
+                            <div class="bar" style="height: 41%; background: linear-gradient(to top, #ffc107, #ffdb4d);">
+                                <span class="bar-value">$515.2</span>
+                                <span class="bar-label">OPEX</span>
+                            </div>
+                            <div class="bar" style="height: 22%; background: linear-gradient(to top, #dc3545, #ff6b6b);">
+                                <span class="bar-value">$274.1</span>
+                                <span class="bar-label">Taxes</span>
+                            </div>
+                            <div class="bar" style="height: 11%; background: linear-gradient(to top, #ff6b6b, #ff8c8c);">
+                                <span class="bar-value">$136.2</span>
+                                <span class="bar-label">CAPEX</span>
+                            </div>
+                            <div class="bar" style="height: 26%; background: linear-gradient(to top, var(--primary-gold), var(--secondary-gold));">
+                                <span class="bar-value">$328.1</span>
+                                <span class="bar-label">Net</span>
+                            </div>
+                        </div>
+                        <div class="legend">
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #28a745;"></div>
+                                <span>Total Revenue: $1,257.7M</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #ffc107;"></div>
+                                <span>Operating Costs: $515.2M</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #dc3545;"></div>
+                                <span>State Revenue & Taxes: $274.1M</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: #ff6b6b;"></div>
+                                <span>Capital Costs: $136.2M</span>
+                            </div>
+                            <div class="legend-item">
+                                <div class="legend-color" style="background: var(--primary-gold);"></div>
+                                <span>Net Cash Flow: $328.1M</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Key Resources -->
+                    <div class="chart-container">
+                        <h3>Key Resources</h3>
+                        <div style="padding: 20px;">
+                            <div class="legend">
+                                <div class="legend-item">
+                                    <div class="legend-color" style="background: var(--primary-gold);"></div>
+                                    <span><strong>18,337,590</strong> tons total ore</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color" style="background: #28a745;"></div>
+                                    <span><strong>1.46</strong> g/t average grade</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color" style="background: #17a2b8;"></div>
+                                    <span><strong>80%</strong> recovery rate</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color" style="background: #ffc107;"></div>
+                                    <span><strong>12.45</strong> stripping ratio</span>
+                                </div>
+                                <div class="legend-item">
+                                    <div class="legend-color" style="background: #6c757d;"></div>
+                                    <span><strong>200</strong> tons/hour processing rate</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Financial Summary -->
+            <div class="financial-summary">
+                <h2><i class="fas fa-wallet"></i> Financial Summary</h2>
+                <div class="financial-grid">
+                    <div class="financial-item">
+                        <i class="fas fa-hand-holding-usd" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                        <div class="amount">$136.2M</div>
+                        <div class="description">Total Capital Costs</div>
+                    </div>
+                    <div class="financial-item">
+                        <i class="fas fa-cogs" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                        <div class="amount">$515.2M</div>
+                        <div class="description">Total Operating Costs</div>
+                    </div>
+                    <div class="financial-item">
+                        <i class="fas fa-chart-line" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                        <div class="amount">$1,257.7M</div>
+                        <div class="description">Total Expected Revenue</div>
+                    </div>
+                    <div class="financial-item">
+                        <i class="fas fa-trophy" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                        <div class="amount">$328.1M</div>
+                        <div class="description">Net Cash Flow After Tax</div>
+                    </div>
+                    <div class="financial-item">
+                        <i class="fas fa-university" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                        <div class="amount">$274.1M</div>
+                        <div class="description">State Revenue & Taxes</div>
+                    </div>
+                    <div class="financial-item">
+                        <i class="fas fa-dollar-sign" style="font-size: 2rem; margin-bottom: 10px;"></i>
+                        <div class="amount">$1,500</div>
+                        <div class="description">Reference Gold Price/oz</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        // Language switcher toggle
+        document.addEventListener('DOMContentLoaded', function() {
+            const langSwitcher = document.querySelector('.language-switcher');
+            const langBtn = document.querySelector('.lang-btn');
+            
+            if (langBtn) {
+                langBtn.addEventListener('click', function(e) {
+                    e.stopPropagation();
+                    langSwitcher.classList.toggle('active');
+                });
+            }
+            
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function() {
+                langSwitcher.classList.remove('active');
+            });
+        });
+
+        function openDashboard() {
+            document.getElementById('dashboardModal').classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeDashboard() {
+            document.getElementById('dashboardModal').classList.remove('active');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close on ESC key
+        document.addEventListener('keydown', function(e) {
+            if (e.key === 'Escape') {
+                closeDashboard();
+            }
+        });
+
+        // Close on outside click
+        document.getElementById('dashboardModal').addEventListener('click', function(e) {
+            if (e.target === this) {
+                closeDashboard();
+            }
+        });
+    </script>
+
+</body>
+</html>
